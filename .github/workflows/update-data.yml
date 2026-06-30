@@ -1,0 +1,31 @@
+name: Update Radar Estado Pro data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 10 * * 1-5"  # 07:30 Chile aprox.; ajustar según horario de verano/invierno
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Update data
+        env:
+          MERCADO_PUBLICO_TICKET: ${{ secrets.MERCADO_PUBLICO_TICKET }}
+        run: python dashboard/scripts/update_data.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dashboard/data/oportunidades_demo.json
+          git diff --cached --quiet || git commit -m "Update Mercado Publico demo data"
+          git push
