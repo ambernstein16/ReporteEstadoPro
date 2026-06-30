@@ -3,33 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Radar Estado Pro - Dashboard Demo</title>
+  <title>Reporte Estado Pro - Dashboard Demo</title>
   <style>
     :root{
-      --bg:#0f172a; --panel:#111827; --panel2:#1f2937; --text:#e5e7eb; --muted:#9ca3af;
-      --line:#334155; --green:#16a34a; --yellow:#d97706; --red:#dc2626; --blue:#2563eb; --white:#ffffff;
+      --bg:#f6f5f2;
+      --surface:#ffffff;
+      --surface-2:#f1eee9;
+      --text:#2f2b26;
+      --muted:#756d64;
+      --line:#ded8cf;
+      --accent:#7a6a5d;
+      --accent-2:#5f554c;
+      --green:#3f7a53;
+      --yellow:#9a6a20;
+      --red:#9b3c3c;
+      --shadow:0 14px 40px rgba(48,43,38,.08);
     }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#0b1020;color:var(--text)}
-    header{padding:28px 32px;background:linear-gradient(135deg,#0f172a,#1e293b);border-bottom:1px solid var(--line)}
-    header h1{margin:0;font-size:30px;letter-spacing:-.02em} header p{margin:8px 0 0;color:var(--muted)}
-    .wrap{max-width:1280px;margin:0 auto;padding:24px 32px 40px}
-    .notice{background:#1e293b;border:1px solid #334155;padding:14px 16px;border-radius:14px;color:#cbd5e1;margin-bottom:20px}
-    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.kpi .num{font-size:30px;font-weight:800}.kpi .label{color:var(--muted);font-size:13px;margin-top:4px}
-    .filters{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr .8fr;gap:12px;margin:20px 0}.filters input,.filters select{width:100%;background:#111827;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px 12px}.filters button{border:0;border-radius:10px;background:#2563eb;color:white;font-weight:700;cursor:pointer}
-    .main{display:grid;grid-template-columns:1.5fr .9fr;gap:20px}.panel{background:rgba(17,24,39,.9);border:1px solid var(--line);border-radius:16px;overflow:hidden}.panel h2{font-size:17px;margin:0;padding:16px 18px;border-bottom:1px solid var(--line)}
-    table{width:100%;border-collapse:collapse} th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #263244;font-size:13px;vertical-align:top} th{color:#cbd5e1;background:#172033;font-size:12px;text-transform:uppercase;letter-spacing:.04em} tr:hover{background:#141f33}.badge{display:inline-flex;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700}.ok{background:rgba(22,163,74,.18);color:#86efac}.warn{background:rgba(217,119,6,.18);color:#fcd34d}.bad{background:rgba(220,38,38,.18);color:#fca5a5}.score{font-weight:800;font-size:16px}.muted{color:var(--muted)}
-    .card{padding:16px 18px;border-bottom:1px solid #263244}.card h3{margin:0 0 7px;font-size:15px}.card p{margin:6px 0;color:#cbd5e1;font-size:13px;line-height:1.45}.card ul{margin:8px 0 0 18px;padding:0;color:#cbd5e1;font-size:13px;line-height:1.45}.source{font-size:12px;color:#93c5fd;word-break:break-all}.cta{margin-top:18px;background:#0f172a;border:1px solid var(--line);border-radius:14px;padding:16px}.cta strong{color:#fff}
-    .footer{color:#9ca3af;font-size:12px;margin-top:18px;line-height:1.45}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    header{padding:30px 32px;background:linear-gradient(135deg,#f4f1ec,#e7e1d8);border-bottom:1px solid var(--line)}
+    header h1{margin:0;font-size:31px;letter-spacing:-.03em;color:#2b2722}
+    header p{margin:8px 0 0;color:var(--muted)}
+    .wrap{max-width:1280px;margin:0 auto;padding:24px 32px 42px}
+    .notice{background:#fffaf2;border:1px solid #e4d3b7;padding:14px 16px;border-radius:14px;color:#584c3f;margin-bottom:20px}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}
+    .kpi{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:18px}
+    .kpi .num{font-size:30px;font-weight:800;color:#2d2822}
+    .kpi .label{color:var(--muted);font-size:13px;margin-top:4px}
+    .filters{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr .8fr;gap:12px;margin:20px 0}
+    .filters input,.filters select{width:100%;background:#fff;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+    .filters button{border:0;border-radius:10px;background:var(--accent);color:white;font-weight:700;cursor:pointer}
+    .filters button:hover{background:var(--accent-2)}
+    .main{display:grid;grid-template-columns:1.5fr .9fr;gap:20px}
+    .panel{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;overflow:hidden}
+    .panel h2{font-size:17px;margin:0;padding:16px 18px;border-bottom:1px solid var(--line);background:#fbfaf8}
+    table{width:100%;border-collapse:collapse}
+    th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #ebe6de;font-size:13px;vertical-align:top}
+    th{color:#62584e;background:#f2eee8;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+    tr:hover{background:#faf7f2;cursor:pointer}
+    .badge{display:inline-flex;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700}
+    .ok{background:rgba(63,122,83,.14);color:var(--green)}
+    .warn{background:rgba(154,106,32,.14);color:var(--yellow)}
+    .bad{background:rgba(155,60,60,.14);color:var(--red)}
+    .score{font-weight:800;font-size:16px;color:#2d2822}
+    .muted{color:var(--muted)}
+    .card{padding:16px 18px;border-bottom:1px solid #ebe6de}
+    .card h3{margin:0 0 7px;font-size:16px;color:#2d2822}
+    .card p{margin:7px 0;color:#4e463e;font-size:13px;line-height:1.45}
+    .card ul{margin:8px 0 0 18px;padding:0;color:#4e463e;font-size:13px;line-height:1.45}
+    .source{font-size:12px;color:#6d5f52;word-break:break-all}
+    .source a{color:#6d5f52}
+    .cta{margin-top:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px;padding:16px;color:#4e463e}
+    .cta strong{color:#2d2822}
+    .footer{color:#756d64;font-size:12px;margin-top:18px;line-height:1.45}
     @media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr}.main{grid-template-columns:1fr}.wrap{padding:20px}}
   </style>
 </head>
 <body>
 <header>
-  <h1>Radar Estado Pro</h1>
+  <h1>Reporte Estado Pro</h1>
   <p>Dashboard demo para oportunidades de Mercado Público - rubro mantención</p>
 </header>
 <main class="wrap">
-  <div class="notice"><strong>Demo comercial:</strong> esta vista usa una muestra curada de oportunidades y señales públicas. La versión automatizada debe consultar la API de Mercado Público con ticket autorizado, guardar resultados normalizados y actualizar la vista diaria.</div>
+  <div class="notice"><strong>Demo comercial:</strong> esta vista usa una muestra curada de oportunidades y señales públicas. La versión automatizada consultará la API de Mercado Público con ticket autorizado, guardará resultados normalizados y actualizará la vista diaria.</div>
   <section class="kpis">
     <div class="kpi"><div class="num" id="kpiTotal">-</div><div class="label">Oportunidades monitoreadas</div></div>
     <div class="kpi"><div class="num" id="kpiConviene">-</div><div class="label">Semáforo conviene</div></div>
@@ -53,36 +89,43 @@
     </div>
     <aside class="panel">
       <h2>Ficha ejecutiva</h2>
-      <div id="detail" class="card"><p class="muted">Selecciona una oportunidad para ver detalle.</p></div>
+      <div id="detail" class="card"><p class="muted">Cargando datos...</p></div>
     </aside>
   </section>
   <div class="cta"><strong>Siguiente evolución:</strong> conectar fuente API, programar actualización diaria, generar reportes PDF/HTML por cliente y agregar login cuando pasemos a versión pagada.</div>
   <p class="footer">Fuente de datos demo: fichas públicas de Mercado Público y lineamientos ChileCompra. Este prototipo no está asociado a ChileCompra ni reemplaza la revisión oficial de bases.</p>
 </main>
 <script>
-const data = [{"id": "2355-16-LP26", "titulo": "Mantenimiento y Repotenciación de Redes Eléctricas Municipales", "comprador": "Municipalidad (según ficha Mercado Público)", "region": "Por confirmar", "subrubro": "Eléctrica / redes municipales", "estado": "Publicada", "fecha_cierre": "2026-07-XX", "monto_estimado": "No informado en demo", "tipo": "LP", "score": 88, "semaforo": "Conviene", "plazo_critico": "Revisar cierre y garantía de seriedad en ficha oficial", "riesgos": ["Requiere certificaciones/normativa eléctrica", "Contrato hasta 31-12-2027", "Validar capacidad de cuadrillas"], "accion": "Revisar bases hoy y confirmar requisitos SEC, experiencia y boleta de garantía.", "fit": "Alta compatibilidad para empresas eléctricas con experiencia municipal y equipos de terreno.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2355-16-LP26"}, {"id": "2793-67-LE26", "titulo": "Mantenimiento de Sistemas de Climatización en recintos municipales", "comprador": "Municipalidad de Huechuraba", "region": "Metropolitana", "subrubro": "Climatización", "estado": "Publicada / revisar ficha", "fecha_cierre": "Por confirmar", "monto_estimado": "No informado en demo", "tipo": "LE", "score": 84, "semaforo": "Conviene", "plazo_critico": "Validar visita a terreno y fecha de preguntas", "riesgos": ["Puede exigir experiencia similar", "Puede requerir atención correctiva", "Revisar anexos técnicos"], "accion": "Descargar bases y verificar equipos, periodicidad y cobertura.", "fit": "Muy buena oportunidad para empresas HVAC con mantención preventiva/correctiva.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2793-67-LE26"}, {"id": "732434-8-LE26", "titulo": "2do llamado Mantención aire acondicionado y calderas - Centro de Sangre de Concepción", "comprador": "Centro de Sangre de Concepción", "region": "Biobío", "subrubro": "Climatización / calderas", "estado": "Adjudicada", "fecha_cierre": "Histórica", "monto_estimado": "No informado en demo", "tipo": "LE", "score": 78, "semaforo": "Revisar", "plazo_critico": "Usar como señal de demanda y comprador recurrente", "riesgos": ["Requiere sello verde", "Ambiente clínico/sanitario", "Convenio 24 meses"], "accion": "Agregar comprador a monitoreo y revisar proveedor adjudicado para análisis competitivo.", "fit": "Sirve para empresas HVAC/calderas con experiencia clínica o institucional.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=732434-8-LE26"}, {"id": "4965-15-LE26", "titulo": "Mantención eléctrica en dependencias municipales, espacios recreacionales y alumbrado público", "comprador": "Municipalidad de Marchigüe", "region": "O'Higgins", "subrubro": "Eléctrica / alumbrado público", "estado": "Adjudicada", "fecha_cierre": "Histórica", "monto_estimado": "100 a 1.000 UTM según tipo LE", "tipo": "LE", "score": 75, "semaforo": "Revisar", "plazo_critico": "Usar como antecedente de demanda municipal 2026", "riesgos": ["Terreno municipal distribuido", "Alumbrado público y dependencias", "Contrato formal"], "accion": "Identificar proveedor adjudicado y comparar requisitos para futuras licitaciones similares.", "fit": "Buen caso de seguimiento para proveedores eléctricos regionales.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4965-15-LE26"}, {"id": "707429-6-LR26", "titulo": "Suministro de mantención y reparación de jardines infantiles, salas cuna y oficinas regionales", "comprador": "Fundación Integra", "region": "Metropolitana Nor Poniente", "subrubro": "Mantención integral / obras menores", "estado": "Histórica / revisar ficha", "fecha_cierre": "Histórica", "monto_estimado": "Superior a 5.000 UTM según tipo LR", "tipo": "LR", "score": 82, "semaforo": "Conviene", "plazo_critico": "Comprador y territorio deben quedar en monitoreo permanente", "riesgos": ["Alto volumen y cobertura territorial", "Puede exigir experiencia y garantías", "Operación simultánea en varios recintos"], "accion": "Monitorear llamados por territorio y preparar carpeta de experiencia.", "fit": "Alta compatibilidad para empresas de mantención integral con cuadrillas y capacidad administrativa.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=707429-6-LR26"}, {"id": "2178-1-LE26", "titulo": "Mantenimiento preventivo equipos de climatización y caldera - Jurisdicción Concepción", "comprador": "Poder Judicial / Jurisdicción Concepción", "region": "Biobío", "subrubro": "Climatización / calderas", "estado": "Histórica", "fecha_cierre": "Histórica", "monto_estimado": "No informado en demo", "tipo": "LE", "score": 80, "semaforo": "Conviene", "plazo_critico": "Revisar recurrencia semestral/anual", "riesgos": ["Edificios institucionales", "Caldera y climatización", "Requisitos técnicos específicos"], "accion": "Agregar comprador y palabras clave a alertas: climatización, caldera, jurisdicción.", "fit": "Muy relevante para empresas HVAC que atienden edificios institucionales.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2178-1-LE26"}, {"id": "1202333-15-LE26", "titulo": "Servicio de mantención emergencia alumbrado público comuna de Quintero 2026", "comprador": "Municipalidad de Quintero", "region": "Valparaíso", "subrubro": "Eléctrica / alumbrado público", "estado": "Adjudicada", "fecha_cierre": "Histórica", "monto_estimado": "No informado en demo", "tipo": "LE", "score": 73, "semaforo": "Revisar", "plazo_critico": "Demanda municipal de emergencia/continuidad operacional", "riesgos": ["Reacción ante emergencias", "Disponibilidad y cuadrillas", "Equipos y vehículos"], "accion": "Usar como referencia para oferta de monitoreo eléctrico municipal.", "fit": "Relevante para empresas eléctricas con respuesta en terreno.", "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1202333-15-LE26"}];
 const qs = s => document.querySelector(s);
-let current = [...data];
+let data = [];
+let current = [];
 function cls(s){return s==='Conviene'?'ok':s==='Revisar'?'warn':'bad'}
 function populateFilters(){
   for(const key of ['subrubro','region']){
-    const sel=qs('#'+key); [...new Set(data.map(d=>d[key]).filter(Boolean))].sort().forEach(v=>{let o=document.createElement('option');o.textContent=v;o.value=v;sel.appendChild(o)})
+    const sel=qs('#'+key);
+    [...new Set(data.map(d=>d[key]).filter(Boolean))].sort().forEach(v=>{let o=document.createElement('option');o.textContent=v;o.value=v;sel.appendChild(o)})
   }
 }
 function render(){
   const q=qs('#q').value.toLowerCase(); const sub=qs('#subrubro').value; const reg=qs('#region').value; const sem=qs('#semaforo').value;
   current = data.filter(d => (!q || JSON.stringify(d).toLowerCase().includes(q)) && (!sub || d.subrubro===sub) && (!reg || d.region===reg) && (!sem || d.semaforo===sem));
   qs('#kpiTotal').textContent=current.length; qs('#kpiConviene').textContent=current.filter(d=>d.semaforo==='Conviene').length;
-  qs('#kpiAvg').textContent=current.length?Math.round(current.reduce((a,b)=>a+b.score,0)/current.length):0;
-  qs('#kpiPublicadas').textContent=current.filter(d=>d.estado.toLowerCase().includes('publicada')).length;
+  qs('#kpiAvg').textContent=current.length?Math.round(current.reduce((a,b)=>a+(Number(b.score)||0),0)/current.length):0;
+  qs('#kpiPublicadas').textContent=current.filter(d=>(d.estado||'').toLowerCase().includes('publicada')).length;
   const tb=qs('#tbody'); tb.innerHTML='';
   current.forEach((d,i)=>{let tr=document.createElement('tr'); tr.innerHTML=`<td><strong>${d.id}</strong></td><td>${d.titulo}<br><span class="muted">${d.comprador}</span></td><td>${d.subrubro}</td><td>${d.estado}</td><td class="score">${d.score}</td><td><span class="badge ${cls(d.semaforo)}">${d.semaforo}</span></td>`; tr.onclick=()=>detail(d); tb.appendChild(tr); if(i===0) detail(d);});
   if(!current.length) qs('#detail').innerHTML='<p class="muted">Sin resultados para los filtros seleccionados.</p>';
 }
 function detail(d){
-  qs('#detail').innerHTML = `<h3>${d.titulo}</h3><p><strong>ID:</strong> ${d.id}</p><p><strong>Comprador:</strong> ${d.comprador}</p><p><strong>Fit:</strong> ${d.fit}</p><p><strong>Acción recomendada:</strong> ${d.accion}</p><p><strong>Plazo crítico:</strong> ${d.plazo_critico}</p><p><strong>Riesgos:</strong></p><ul>${d.riesgos.map(r=>`<li>${r}</li>`).join('')}</ul><p class="source">Fuente: ${d.source}</p>`;
+  const obs = d.observaciones_importantes || d.riesgos || [];
+  qs('#detail').innerHTML = `<h3>${d.titulo}</h3><p><strong>ID:</strong> ${d.id}</p><p><strong>Comprador:</strong> ${d.comprador}</p><p><strong>Fit:</strong> ${d.fit}</p><p><strong>Acción recomendada:</strong> ${d.accion}</p><p><strong>Plazo crítico:</strong> ${d.plazo_critico}</p><p><strong>Observaciones Importantes:</strong></p><ul>${obs.map(r=>`<li>${r}</li>`).join('')}</ul><p class="source">Fuente: <a href="${d.source}" target="_blank" rel="noopener">${d.source}</a></p>`;
 }
-document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',render)); qs('#reset').onclick=()=>{qs('#q').value='';qs('#subrubro').value='';qs('#region').value='';qs('#semaforo').value='';render();}; populateFilters(); render();
+document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',render));
+qs('#reset').onclick=()=>{qs('#q').value='';qs('#subrubro').value='';qs('#region').value='';qs('#semaforo').value='';render();};
+fetch('data/oportunidades_demo.json')
+  .then(r=>r.json())
+  .then(json=>{data=json; current=[...data]; populateFilters(); render();})
+  .catch(()=>{qs('#detail').innerHTML='<p class="muted">No se pudo cargar el archivo de datos. Revisa que el sitio esté publicado desde GitHub Pages o servidor web.</p>';});
 </script>
 </body>
 </html>
