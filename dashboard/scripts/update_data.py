@@ -1,69 +1,179 @@
 """
-Radar Estado Pro - actualización de datos demo / API Mercado Público.
+Reporte Estado Pro - actualización diaria desde API Mercado Público.
 
 Uso previsto en GitHub Actions:
 1) Crear un secret de repositorio llamado MERCADO_PUBLICO_TICKET.
-2) Ajustar keywords y endpoints cuando el ticket esté activo.
-3) Este script debe escribir dashboard/data/oportunidades_demo.json.
+2) El workflow ejecuta este script de lunes a viernes.
+3) El script consulta licitaciones del día, filtra rubros de mantención y escribe dashboard/data/oportunidades_demo.json.
 
-Nota: los endpoints exactos pueden variar según documentación vigente de api.mercadopublico.cl.
+Nota: esta es una primera integración MVP. Debe validarse con el ticket real y con ejemplos actuales de la API.
 """
-import json, os, datetime, urllib.parse, urllib.request
+
+import datetime as dt
+import json
+import os
+import urllib.error
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "oportunidades_demo.json"
 TICKET = os.getenv("MERCADO_PUBLICO_TICKET", "").strip()
-KEYWORDS = ["mantención climatización", "mantención eléctrica", "obras menores", "calderas", "alumbrado público"]
 
-def score_item(item):
+API_BASE = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json"
+
+KEYWORDS = {
+    "Climatización": ["climatización", "climatizacion", "aire acondicionado", "chiller", "caldera", "central térmica", "hvac"],
+    "Eléctrica / luminarias": ["mantención eléctrica", "mantencion electrica", "alumbrado", "luminaria", "tablero", "redes eléctricas"],
+    "Mantención integral / obras menores": ["mantención integral", "mantencion integral", "obras menores", "reparación", "reparacion", "edificio", "sala cuna", "jardín infantil", "jardin infantil"],
+}
+
+OBSERVATION_WORDS = [
+    "garantía", "garantia", "visita a terreno", "experiencia", "certificación", "certificacion",
+    "registro de proveedores", "beneficiarios finales", "boleta", "seguro", "plazo"
+]
+
+
+def today_cl_format() -> str:
+    """Formato usado por la API: ddmmyyyy."""
+    return dt.datetime.now().strftime("%d%m%Y")
+
+
+def api_get(params: dict) -> dict:
+    query = urllib.parse.urlencode(params)
+    url = f"{API_BASE}?{query}"
+    req = urllib.request.Request(url, headers={"User-Agent": "ReporteEstadoPro/0.1"})
+    with urllib.request.urlopen(req, timeout=40) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def classify_subrubro(item: dict) -> str:
+    text = json.dumps(item, ensure_ascii=False).lower()
+    matches = []
+    for subrubro, words in KEYWORDS.items():
+        if any(word in text for word in words):
+            matches.append(subrubro)
+    return " / ".join(matches) if matches else "Por clasificar"
+
+
+def has_maintenance_fit(item: dict) -> bool:
+    text = json.dumps(item, ensure_ascii=False).lower()
+    return any(word in text for words in KEYWORDS.values() for word in words)
+
+
+def score_item(item: dict) -> int:
     text = json.dumps(item, ensure_ascii=False).lower()
     score = 50
-    if any(k in text for k in ["climatización", "caldera", "aire acondicionado", "chiller"]): score += 18
-    if any(k in text for k in ["eléctrica", "alumbrado", "luminaria"]): score += 16
-    if any(k in text for k in ["mantención", "mantenimiento", "reparación"]): score += 15
-    if any(k in text for k in ["garantía", "visita a terreno"]): score -= 6
+    if any(k in text for k in KEYWORDS["Climatización"]):
+        score += 18
+    if any(k in text for k in KEYWORDS["Eléctrica / luminarias"]):
+        score += 16
+    if any(k in text for k in KEYWORDS["Mantención integral / obras menores"]):
+        score += 15
+    if "publicada" in text:
+        score += 8
+    if any(k in text for k in ["garantía", "garantia", "visita a terreno"]):
+        score -= 5
     return max(0, min(score, 100))
 
-def semaforo(score):
-    return "Conviene" if score >= 80 else "Revisar" if score >= 60 else "Descartar"
 
-def fetch_api_placeholder():
-    # Reemplazar por endpoint vigente de api.mercadopublico.cl al activar ticket.
-    # Ejemplo conceptual:
-    # url = f"https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json?fecha={fecha}&ticket={TICKET}"
-    # with urllib.request.urlopen(url, timeout=30) as r:
-    #     return json.load(r)
-    return []
+def semaforo(score: int) -> str:
+    if score >= 80:
+        return "Conviene"
+    if score >= 60:
+        return "Revisar"
+    return "Descartar"
+
+
+def build_observations(item: dict) -> list[str]:
+    text = json.dumps(item, ensure_ascii=False).lower()
+    observations = []
+    for word in OBSERVATION_WORDS:
+        if word in text:
+            observations.append(f"Revisar posible requisito asociado a: {word}")
+    if not observations:
+        observations = [
+            "Validar requisitos técnicos en bases",
+            "Validar garantías, anexos y experiencia solicitada",
+            "Confirmar fecha de cierre y preguntas"
+        ]
+    return observations[:4]
+
+
+def get_nested(item: dict, *keys, default="Por confirmar"):
+    value = item
+    for key in keys:
+        if isinstance(value, dict):
+            value = value.get(key)
+        else:
+            return default
+    return value or default
+
+
+def normalize(item: dict) -> dict:
+    score = score_item(item)
+    codigo = item.get("CodigoExterno") or item.get("Codigo") or item.get("codigo") or "sin-id"
+    titulo = item.get("Nombre") or item.get("nombre") or "Sin título"
+    comprador = get_nested(item, "Comprador", "NombreOrganismo")
+    estado = item.get("Estado") or item.get("estado") or "Por confirmar"
+    fecha_cierre = item.get("FechaCierre") or item.get("fechaCierre") or "Por confirmar"
+    tipo = item.get("Tipo") or item.get("TipoLicitacion") or "Por confirmar"
+
+    return {
+        "id": codigo,
+        "titulo": titulo,
+        "comprador": comprador,
+        "region": "Por confirmar",
+        "subrubro": classify_subrubro(item),
+        "estado": estado,
+        "fecha_cierre": fecha_cierre,
+        "monto_estimado": "Por confirmar",
+        "tipo": tipo,
+        "score": score,
+        "semaforo": semaforo(score),
+        "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno y garantías",
+        "observaciones_importantes": build_observations(item),
+        "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+        "fit": "Clasificación automática inicial para rubro mantención; requiere revisión humana en piloto.",
+        "source": f"https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion={codigo}"
+    }
+
+
+def fetch_daily_licitaciones(fecha: str) -> list[dict]:
+    payload = api_get({"fecha": fecha, "ticket": TICKET})
+    listado = payload.get("Listado") or payload.get("listado") or []
+    if isinstance(listado, dict):
+        listado = listado.get("Licitacion", []) or listado.get("licitacion", [])
+    return listado if isinstance(listado, list) else []
+
 
 def main():
     if not TICKET:
         print("Sin MERCADO_PUBLICO_TICKET. Mantengo dataset demo existente.")
         return
-    raw = fetch_api_placeholder()
-    normalized = []
-    for item in raw:
-        s = score_item(item)
-        normalized.append({
-            "id": item.get("CodigoExterno") or item.get("codigo") or "sin-id",
-            "titulo": item.get("Nombre") or item.get("nombre") or "Sin título",
-            "comprador": item.get("Comprador", {}).get("NombreOrganismo", "Por confirmar") if isinstance(item.get("Comprador"), dict) else "Por confirmar",
-            "region": "Por confirmar",
-            "subrubro": "Por clasificar",
-            "estado": item.get("Estado", "Por confirmar"),
-            "fecha_cierre": item.get("FechaCierre", "Por confirmar"),
-            "monto_estimado": "Por confirmar",
-            "tipo": item.get("Tipo", "Por confirmar"),
-            "score": s,
-            "semaforo": semaforo(s),
-            "plazo_critico": "Revisar fecha de cierre, preguntas y visita a terreno",
-            "riesgos": ["Validar requisitos técnicos", "Validar garantías", "Validar experiencia solicitada"],
-            "accion": "Descargar bases y revisar anexos críticos.",
-            "fit": "Clasificación automática inicial; requiere revisión humana en piloto.",
-            "source": "https://www.mercadopublico.cl/"
-        })
+
+    fecha = today_cl_format()
+    try:
+        raw_items = fetch_daily_licitaciones(fecha)
+    except urllib.error.HTTPError as exc:
+        print(f"Error HTTP consultando API Mercado Público: {exc.code} {exc.reason}")
+        return
+    except Exception as exc:
+        print(f"Error consultando API Mercado Público: {exc}")
+        return
+
+    filtered = [item for item in raw_items if has_maintenance_fit(item)]
+    normalized = [normalize(item) for item in filtered]
+    normalized.sort(key=lambda x: x["score"], reverse=True)
+
+    if not normalized:
+        print(f"Sin oportunidades de mantención detectadas para {fecha}. Mantengo dataset existente.")
+        return
+
     OUT.write_text(json.dumps(normalized, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Actualizadas {len(normalized)} oportunidades: {datetime.datetime.now().isoformat()}")
+    print(f"Actualizadas {len(normalized)} oportunidades para {fecha}: {dt.datetime.now().isoformat()}")
+
 
 if __name__ == "__main__":
     main()
