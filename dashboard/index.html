@@ -23,14 +23,14 @@
   </style>
 </head>
 <body>
-<header><h1>Reporte Estado Pro</h1><p>Dashboard demo para oportunidades de Mercado Público - mantención y obras civiles</p></header>
+<header><h1>Reporte Estado Pro</h1><p>Dashboard demo para oportunidades vigentes de Mercado Público - mantención y obras civiles</p></header>
 <main class="wrap">
-  <div class="notice"><strong>Demo comercial:</strong> esta vista consulta la API de Mercado Público, enriquece oportunidades por código y genera reportes HTML/PDF por licitación de interés.</div>
-  <div class="tabs"><button class="tab-btn active" data-tab="tab-dashboard">Oportunidades</button><button class="tab-btn" data-tab="tab-score">Cómo se arma el score</button></div>
+  <div class="notice"><strong>Demo comercial:</strong> esta vista consulta la API de Mercado Público, enriquece oportunidades por código y muestra solo licitaciones vigentes o con cierre por confirmar. Las licitaciones vencidas, cerradas, adjudicadas, desiertas, revocadas o suspendidas quedan fuera del dashboard principal.</div>
+  <div class="tabs"><button class="tab-btn active" data-tab="tab-dashboard">Oportunidades vigentes</button><button class="tab-btn" data-tab="tab-score">Cómo se arma el score</button></div>
 
   <section id="tab-dashboard" class="tab active">
     <section class="kpis">
-      <div class="kpi"><div class="num" id="kpiTotal">-</div><div class="label">Oportunidades monitoreadas</div></div>
+      <div class="kpi"><div class="num" id="kpiTotal">-</div><div class="label">Oportunidades vigentes</div></div>
       <div class="kpi"><div class="num" id="kpiConviene">-</div><div class="label">Semáforo conviene</div></div>
       <div class="kpi"><div class="num" id="kpiAvg">-</div><div class="label">Score promedio</div></div>
       <div class="kpi"><div class="num" id="kpiConMonto">-</div><div class="label">Con monto informado</div></div>
@@ -43,7 +43,7 @@
       <button id="reset">Limpiar</button>
     </section>
     <section class="main">
-      <div class="panel"><h2>Oportunidades priorizadas</h2><table><thead><tr><th>ID</th><th>Oportunidad</th><th>Subrubro</th><th>Monto</th><th>Cierre</th><th>Score</th><th>Decisión</th></tr></thead><tbody id="tbody"></tbody></table></div>
+      <div class="panel"><h2>Oportunidades vigentes priorizadas</h2><table><thead><tr><th>ID</th><th>Oportunidad</th><th>Subrubro</th><th>Monto</th><th>Cierre</th><th>Score</th><th>Decisión</th></tr></thead><tbody id="tbody"></tbody></table></div>
       <aside class="panel"><h2>Ficha ejecutiva</h2><div id="detail" class="card"><p class="muted">Cargando datos...</p></div></aside>
     </section>
   </section>
@@ -52,7 +52,7 @@
     <div class="score-wrap">
       <div class="score-box">
         <h3>Objetivo del score</h3>
-        <p>El score prioriza oportunidades para decidir rápido si conviene revisar bases, asignar tiempo comercial/técnico o descartar. No reemplaza la lectura oficial de bases.</p>
+        <p>El score prioriza oportunidades vigentes para decidir rápido si conviene revisar bases, asignar tiempo comercial/técnico o descartar. No reemplaza la lectura oficial de bases.</p>
         <div class="formula">Score = base + fit rubro + urgencia - complejidad</div>
         <p>La escala queda acotada entre 0 y 100 puntos.</p>
       </div>
@@ -81,7 +81,7 @@ function render(){
   qs('#kpiTotal').textContent=current.length; qs('#kpiConviene').textContent=current.filter(d=>d.semaforo==='Conviene').length; qs('#kpiAvg').textContent=current.length?Math.round(current.reduce((a,b)=>a+(Number(b.score)||0),0)/current.length):0; qs('#kpiConMonto').textContent=current.filter(hasMonto).length;
   const tb=qs('#tbody'); tb.innerHTML='';
   current.forEach((d,i)=>{let tr=document.createElement('tr'); tr.innerHTML=`<td><strong>${d.id}</strong></td><td>${d.titulo}<br><span class="muted">${d.comprador}</span></td><td>${d.subrubro}</td><td>${clean(d.monto_estimado)}</td><td>${clean(d.fecha_cierre)}</td><td class="score">${d.score}</td><td><span class="badge ${cls(d.semaforo)}">${d.semaforo}</span></td>`; tr.onclick=()=>detail(d); tb.appendChild(tr); if(i===0) detail(d);});
-  if(!current.length) qs('#detail').innerHTML='<p class="muted">Sin resultados para los filtros seleccionados.</p>';
+  if(!current.length) qs('#detail').innerHTML='<p class="muted">Sin oportunidades vigentes para los filtros seleccionados.</p>';
 }
 function detail(d){
   const obs = d.observaciones_importantes || d.riesgos || []; const slug = slugify(d.id); const breakdown = d.score_desglose || [];
