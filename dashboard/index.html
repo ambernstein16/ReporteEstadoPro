@@ -53,6 +53,9 @@
     .card ul{margin:8px 0 0 18px;padding:0;color:#4e463e;font-size:13px;line-height:1.45}
     .source{font-size:12px;color:#6d5f52;word-break:break-all}
     .source a{color:#6d5f52}
+    .report-actions{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0 4px}
+    .report-actions a{background:var(--accent);color:#fff;text-decoration:none;border-radius:10px;padding:9px 11px;font-weight:800;font-size:12px}
+    .report-actions a.secondary{background:#ebe5dc;color:#3e362f}
     .cta{margin-top:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px;padding:16px;color:#4e463e}
     .cta strong{color:#2d2822}
     .footer{color:#756d64;font-size:12px;margin-top:18px;line-height:1.45}
@@ -92,7 +95,7 @@
       <div id="detail" class="card"><p class="muted">Cargando datos...</p></div>
     </aside>
   </section>
-  <div class="cta"><strong>Siguiente evolución:</strong> conectar fuente API, programar actualización diaria, generar reportes PDF/HTML por cliente y agregar login cuando pasemos a versión pagada.</div>
+  <div class="cta"><strong>Siguiente evolución:</strong> conectar fuente API, programar actualización diaria, generar reportes PDF/HTML por oportunidad y agregar login cuando pasemos a versión pagada.</div>
   <p class="footer">Fuente de datos demo: fichas públicas de Mercado Público y lineamientos ChileCompra. Este prototipo no está asociado a ChileCompra ni reemplaza la revisión oficial de bases.</p>
 </main>
 <script>
@@ -100,6 +103,7 @@ const qs = s => document.querySelector(s);
 let data = [];
 let current = [];
 function cls(s){return s==='Conviene'?'ok':s==='Revisar'?'warn':'bad'}
+function slugify(value){return String(value||'sin-id').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9_-]+/g,'-').replace(/^-+|-+$/g,'').toLowerCase() || 'sin-id'}
 function populateFilters(){
   for(const key of ['subrubro','region']){
     const sel=qs('#'+key);
@@ -118,7 +122,8 @@ function render(){
 }
 function detail(d){
   const obs = d.observaciones_importantes || d.riesgos || [];
-  qs('#detail').innerHTML = `<h3>${d.titulo}</h3><p><strong>ID:</strong> ${d.id}</p><p><strong>Comprador:</strong> ${d.comprador}</p><p><strong>Fit:</strong> ${d.fit}</p><p><strong>Acción recomendada:</strong> ${d.accion}</p><p><strong>Plazo crítico:</strong> ${d.plazo_critico}</p><p><strong>Observaciones Importantes:</strong></p><ul>${obs.map(r=>`<li>${r}</li>`).join('')}</ul><p class="source">Fuente: <a href="${d.source}" target="_blank" rel="noopener">${d.source}</a></p>`;
+  const slug = slugify(d.id);
+  qs('#detail').innerHTML = `<h3>${d.titulo}</h3><p><strong>ID:</strong> ${d.id}</p><p><strong>Comprador:</strong> ${d.comprador}</p><p><strong>Fit:</strong> ${d.fit}</p><p><strong>Acción recomendada:</strong> ${d.accion}</p><p><strong>Plazo crítico:</strong> ${d.plazo_critico}</p><p><strong>Observaciones Importantes:</strong></p><ul>${obs.map(r=>`<li>${r}</li>`).join('')}</ul><div class="report-actions"><a href="../reports/html/${slug}.html" target="_blank" rel="noopener">Ver reporte HTML</a><a class="secondary" href="../reports/pdf/${slug}.pdf" target="_blank" rel="noopener">Descargar PDF</a><a class="secondary" href="../reports/" target="_blank" rel="noopener">Índice de reportes</a></div><p class="source">Fuente: <a href="${d.source}" target="_blank" rel="noopener">${d.source}</a></p>`;
 }
 document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',render));
 qs('#reset').onclick=()=>{qs('#q').value='';qs('#subrubro').value='';qs('#region').value='';qs('#semaforo').value='';render();};
