@@ -18,14 +18,19 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Update data
         env:
           MERCADO_PUBLICO_TICKET: ${{ secrets.MERCADO_PUBLICO_TICKET }}
+          INCLUDE_DEMO_ROWS: "true"
         run: python dashboard/scripts/update_data.py
+      - name: Generate HTML and PDF reports
+        run: python dashboard/scripts/generate_reports.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dashboard/data/oportunidades_demo.json
-          git diff --cached --quiet || git commit -m "Update Mercado Publico demo data"
+          git add dashboard/data/oportunidades_demo.json reports
+          git diff --cached --quiet || git commit -m "Update Mercado Publico data and reports"
           git push
