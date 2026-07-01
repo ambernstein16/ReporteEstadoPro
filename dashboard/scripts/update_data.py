@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "oportunidades_demo.json"
 TICKET = os.getenv("MERCADO_PUBLICO_TICKET", "").strip()
+INCLUDE_DEMO_ROWS = os.getenv("INCLUDE_DEMO_ROWS", "true").lower() == "true"
 
 API_BASE = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json"
 
@@ -34,6 +35,53 @@ OBSERVATION_WORDS = [
     "garantía", "garantia", "visita a terreno", "experiencia", "certificación", "certificacion",
     "registro de proveedores", "beneficiarios finales", "boleta", "seguro", "plazo",
     "permiso municipal", "recepción municipal", "recepcion municipal", "prevención de riesgos", "prevencion de riesgos"
+]
+
+DEMO_ROWS = [
+    {
+        "id": "DEMO-OC-001",
+        "titulo": "Conservación y reparación de infraestructura municipal",
+        "comprador": "Municipalidad / demo comercial",
+        "region": "Metropolitana",
+        "subrubro": "Obras civiles",
+        "estado": "Demo / revisar oportunidad similar",
+        "fecha_cierre": "Por confirmar",
+        "monto_estimado": "Por confirmar",
+        "tipo": "LE / LP",
+        "score": 86,
+        "semaforo": "Conviene",
+        "plazo_critico": "Validar visita a terreno, itemizado, cubicaciones y garantías",
+        "observaciones_importantes": [
+            "Puede exigir experiencia en obras civiles similares",
+            "Revisar itemizado, plazo de ejecución y multas",
+            "Validar permisos, recepción y prevención de riesgos"
+        ],
+        "accion": "Solicitar revisión técnica del itemizado y confirmar capacidad de cuadrilla antes de ofertar.",
+        "fit": "Alta compatibilidad para empresas que ejecutan obras menores, conservación y reparación de infraestructura.",
+        "source": "https://www.mercadopublico.cl/"
+    },
+    {
+        "id": "DEMO-OC-002",
+        "titulo": "Mejoramiento de veredas, pavimentos y accesos en recinto público",
+        "comprador": "Organismo público / demo comercial",
+        "region": "Valparaíso",
+        "subrubro": "Obras civiles / obras menores",
+        "estado": "Demo / oportunidad tipo",
+        "fecha_cierre": "Por confirmar",
+        "monto_estimado": "Por confirmar",
+        "tipo": "LE",
+        "score": 79,
+        "semaforo": "Revisar",
+        "plazo_critico": "Confirmar cubicaciones, especificaciones técnicas y visita a terreno",
+        "observaciones_importantes": [
+            "Puede requerir profesional responsable o experiencia acreditada",
+            "Revisar garantías, seguros y prevención de riesgos",
+            "Confirmar disponibilidad de materiales y plazo de ejecución"
+        ],
+        "accion": "Revisar bases y decidir si conviene según plazo, distancia y margen esperado.",
+        "fit": "Buena oportunidad para empresas de obras civiles livianas y mantenimiento de infraestructura.",
+        "source": "https://www.mercadopublico.cl/"
+    }
 ]
 
 
@@ -152,6 +200,15 @@ def fetch_daily_licitaciones(fecha: str) -> list[dict]:
     return listado if isinstance(listado, list) else []
 
 
+def merge_demo_rows(rows: list[dict]) -> list[dict]:
+    if not INCLUDE_DEMO_ROWS:
+        return rows
+    existing_ids = {row.get("id") for row in rows}
+    merged = rows + [row for row in DEMO_ROWS if row["id"] not in existing_ids]
+    merged.sort(key=lambda x: x.get("score", 0), reverse=True)
+    return merged
+
+
 def main():
     if not TICKET:
         print("Sin MERCADO_PUBLICO_TICKET. Mantengo dataset demo existente.")
@@ -169,6 +226,7 @@ def main():
 
     filtered = [item for item in raw_items if has_relevant_fit(item)]
     normalized = [normalize(item) for item in filtered]
+    normalized = merge_demo_rows(normalized)
     normalized.sort(key=lambda x: x["score"], reverse=True)
 
     if not normalized:
