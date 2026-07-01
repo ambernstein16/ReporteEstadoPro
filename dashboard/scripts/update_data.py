@@ -4,7 +4,7 @@ Reporte Estado Pro - actualización diaria desde API Mercado Público.
 Uso previsto en GitHub Actions:
 1) Crear un secret de repositorio llamado MERCADO_PUBLICO_TICKET.
 2) El workflow ejecuta este script de lunes a viernes.
-3) El script consulta licitaciones del día, filtra rubros de mantención y escribe dashboard/data/oportunidades_demo.json.
+3) El script consulta licitaciones del día, filtra rubros de mantención y obras civiles, y escribe dashboard/data/oportunidades_demo.json.
 
 Nota: esta es una primera integración MVP. Debe validarse con el ticket real y con ejemplos actuales de la API.
 """
@@ -25,13 +25,15 @@ API_BASE = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json
 
 KEYWORDS = {
     "Climatización": ["climatización", "climatizacion", "aire acondicionado", "chiller", "caldera", "central térmica", "hvac"],
-    "Eléctrica / luminarias": ["mantención eléctrica", "mantencion electrica", "alumbrado", "luminaria", "tablero", "redes eléctricas"],
-    "Mantención integral / obras menores": ["mantención integral", "mantencion integral", "obras menores", "reparación", "reparacion", "edificio", "sala cuna", "jardín infantil", "jardin infantil"],
+    "Eléctrica / luminarias": ["mantención eléctrica", "mantencion electrica", "alumbrado", "luminaria", "tablero", "redes eléctricas", "redes electricas"],
+    "Mantención integral / obras menores": ["mantención integral", "mantencion integral", "mantenimiento integral", "obras menores", "reparación", "reparacion", "edificio", "sala cuna", "jardín infantil", "jardin infantil"],
+    "Obras civiles": ["obras civiles", "obra civil", "conservación", "conservacion", "mejoramiento", "reposición", "reposicion", "pavimentos", "veredas", "cubierta", "techumbre", "demolición", "demolicion", "remodelación", "remodelacion", "habilitación", "habilitacion", "construcción", "construccion", "infraestructura"],
 }
 
 OBSERVATION_WORDS = [
     "garantía", "garantia", "visita a terreno", "experiencia", "certificación", "certificacion",
-    "registro de proveedores", "beneficiarios finales", "boleta", "seguro", "plazo"
+    "registro de proveedores", "beneficiarios finales", "boleta", "seguro", "plazo",
+    "permiso municipal", "recepción municipal", "recepcion municipal", "prevención de riesgos", "prevencion de riesgos"
 ]
 
 
@@ -57,7 +59,7 @@ def classify_subrubro(item: dict) -> str:
     return " / ".join(matches) if matches else "Por clasificar"
 
 
-def has_maintenance_fit(item: dict) -> bool:
+def has_relevant_fit(item: dict) -> bool:
     text = json.dumps(item, ensure_ascii=False).lower()
     return any(word in text for words in KEYWORDS.values() for word in words)
 
@@ -71,6 +73,8 @@ def score_item(item: dict) -> int:
         score += 16
     if any(k in text for k in KEYWORDS["Mantención integral / obras menores"]):
         score += 15
+    if any(k in text for k in KEYWORDS["Obras civiles"]):
+        score += 17
     if "publicada" in text:
         score += 8
     if any(k in text for k in ["garantía", "garantia", "visita a terreno"]):
@@ -96,7 +100,7 @@ def build_observations(item: dict) -> list[str]:
         observations = [
             "Validar requisitos técnicos en bases",
             "Validar garantías, anexos y experiencia solicitada",
-            "Confirmar fecha de cierre y preguntas"
+            "Confirmar fecha de cierre, preguntas y visita a terreno"
         ]
     return observations[:4]
 
@@ -132,10 +136,10 @@ def normalize(item: dict) -> dict:
         "tipo": tipo,
         "score": score,
         "semaforo": semaforo(score),
-        "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno y garantías",
+        "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y antecedentes técnicos",
         "observaciones_importantes": build_observations(item),
         "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-        "fit": "Clasificación automática inicial para rubro mantención; requiere revisión humana en piloto.",
+        "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
         "source": f"https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion={codigo}"
     }
 
@@ -163,12 +167,12 @@ def main():
         print(f"Error consultando API Mercado Público: {exc}")
         return
 
-    filtered = [item for item in raw_items if has_maintenance_fit(item)]
+    filtered = [item for item in raw_items if has_relevant_fit(item)]
     normalized = [normalize(item) for item in filtered]
     normalized.sort(key=lambda x: x["score"], reverse=True)
 
     if not normalized:
-        print(f"Sin oportunidades de mantención detectadas para {fecha}. Mantengo dataset existente.")
+        print(f"Sin oportunidades de mantención u obras civiles detectadas para {fecha}. Mantengo dataset existente.")
         return
 
     OUT.write_text(json.dumps(normalized, ensure_ascii=False, indent=2), encoding="utf-8")
