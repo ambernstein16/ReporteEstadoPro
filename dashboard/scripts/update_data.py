@@ -1,14 +1,12 @@
 """
 Reporte Estado Pro - actualización diaria desde API Mercado Público.
 
-Uso previsto en GitHub Actions:
-1) Crear un secret de repositorio llamado MERCADO_PUBLICO_TICKET.
-2) El workflow ejecuta este script de lunes a viernes.
-3) El script consulta licitaciones del día, filtra rubros de mantención y obras civiles.
-4) Para cada oportunidad relevante consulta el detalle por código para rescatar monto, plazos y otros campos críticos.
-5) Escribe dashboard/data/oportunidades_demo.json.
-
-Nota: esta es una primera integración MVP. Debe validarse con el ticket real y con ejemplos actuales de la API.
+Objetivo del MVP:
+- Consultar licitaciones del día.
+- Filtrar rubros de mantención y obras civiles.
+- Enriquecer por código para rescatar monto, plazos y campos críticos.
+- Mostrar en el dashboard solo oportunidades vigentes o con fecha de cierre por confirmar.
+- Generar un JSON consumido por el dashboard y los reportes.
 """
 
 import datetime as dt
@@ -25,7 +23,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "oportunidades_demo.json"
 TICKET = os.getenv("MERCADO_PUBLICO_TICKET", "").strip()
 INCLUDE_DEMO_ROWS = os.getenv("INCLUDE_DEMO_ROWS", "true").lower() == "true"
-
 API_BASE = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json"
 
 KEYWORDS = {
@@ -50,6 +47,7 @@ MODALIDAD_PAGO = {
     "8": "Pago bimensual", "9": "Pago por estado de avance", "10": "Pago trimestral"
 }
 ESTADOS = {"5": "Publicada", "6": "Cerrada", "7": "Desierta", "8": "Adjudicada", "18": "Revocada", "19": "Suspendida"}
+CLOSED_STATE_WORDS = ["cerrada", "adjudicada", "desierta", "revocada", "suspendida", "cancelada", "anulada"]
 
 DEMO_ROWS = [
     {
@@ -58,15 +56,24 @@ DEMO_ROWS = [
         "comprador": "Municipalidad / demo comercial",
         "region": "Metropolitana",
         "subrubro": "Obras civiles",
-        "estado": "Demo / revisar oportunidad similar",
+        "estado": "Demo / oportunidad tipo vigente",
         "fecha_cierre": "Por confirmar",
-        "plazo_ejecucion": "90 días corridos aprox. / validar en bases",
+        "fecha_inicio_preguntas": "Por confirmar",
+        "fecha_final_preguntas": "Por confirmar",
         "fecha_adjudicacion": "Por confirmar",
+        "plazo_ejecucion": "90 días corridos aprox. / validar en bases",
         "monto_estimado": "CLP 85.000.000 aprox. / demo",
         "tipo_monto": "Presupuesto disponible / demo",
         "moneda": "CLP",
         "modalidad_pago": "Pago por estado de avance / demo",
         "tipo": "LE / LP",
+        "contrato": "Por confirmar",
+        "obras": "Sí",
+        "subcontratacion": "Por confirmar",
+        "toma_razon": "Por confirmar",
+        "visibilidad_monto": "Sí",
+        "extension_plazo": "Por confirmar",
+        "fuente_financiamiento": "Por confirmar",
         "score": 86,
         "semaforo": "Conviene",
         "score_desglose": [
@@ -91,15 +98,24 @@ DEMO_ROWS = [
         "comprador": "Organismo público / demo comercial",
         "region": "Valparaíso",
         "subrubro": "Obras civiles / obras menores",
-        "estado": "Demo / oportunidad tipo",
+        "estado": "Demo / oportunidad tipo vigente",
         "fecha_cierre": "Por confirmar",
-        "plazo_ejecucion": "45 a 60 días aprox. / validar en bases",
+        "fecha_inicio_preguntas": "Por confirmar",
+        "fecha_final_preguntas": "Por confirmar",
         "fecha_adjudicacion": "Por confirmar",
+        "plazo_ejecucion": "45 a 60 días aprox. / validar en bases",
         "monto_estimado": "CLP 42.000.000 aprox. / demo",
         "tipo_monto": "Precio referencial / demo",
         "moneda": "CLP",
         "modalidad_pago": "Contra entrega conforme / demo",
         "tipo": "LE",
+        "contrato": "Por confirmar",
+        "obras": "Sí",
+        "subcontratacion": "Por confirmar",
+        "toma_razon": "Por confirmar",
+        "visibilidad_monto": "Sí",
+        "extension_plazo": "Por confirmar",
+        "fuente_financiamiento": "Por confirmar",
         "score": 79,
         "semaforo": "Revisar",
         "score_desglose": [
@@ -124,10 +140,14 @@ def today_cl_format() -> str:
     return dt.datetime.now().strftime("%d%m%Y")
 
 
+def today_date() -> dt.date:
+    return dt.datetime.now().date()
+
+
 def api_get(params: dict) -> dict:
     query = urllib.parse.urlencode(params)
     url = f"{API_BASE}?{query}"
-    req = urllib.request.Request(url, headers={"User-Agent": "ReporteEstadoPro/0.2"})
+    req = urllib.request.Request(url, headers={"User-Agent": "ReporteEstadoPro/0.3"})
     with urllib.request.urlopen(req, timeout=40) as response:
         return json.loads(response.read().decode("utf-8"))
 
@@ -163,6 +183,27 @@ def first_listed(payload: Any) -> dict:
     if isinstance(listado, list) and listado:
         return listado[0] if isinstance(listado[0], dict) else {}
     return {}
+
+
+def parse_date(value: Any) -> dt.date | None:
+    if value in (None, ""):
+        return None
+    text = str(value).strip()
+    if not text or text.lower() in {"por confirmar", "sin información", "sin informacion"}:
+        return None
+    iso_match = re.search(r"(20\d{2})-(\d{2})-(\d{2})", text)
+    if iso_match:
+        try:
+            return dt.date(int(iso_match.group(1)), int(iso_match.group(2)), int(iso_match.group(3)))
+        except ValueError:
+            return None
+    slash_match = re.search(r"(\d{1,2})[/-](\d{1,2})[/-](20\d{2})", text)
+    if slash_match:
+        try:
+            return dt.date(int(slash_match.group(3)), int(slash_match.group(2)), int(slash_match.group(1)))
+        except ValueError:
+            return None
+    return None
 
 
 def format_number(value: Any) -> str:
@@ -249,7 +290,7 @@ def scoring_breakdown(item: dict) -> tuple[int, list[dict]]:
         if any(k in text for k in words):
             score += points
             breakdown.append({"factor": name, "puntos": points, "detalle": detail})
-    if "publicada" in text or "5" == str(find_first(item, ["Estado", "CodigoEstado"])):
+    if "publicada" in text or str(find_first(item, ["Estado", "CodigoEstado"])) == "5":
         score += 8
         breakdown.append({"factor": "Estado publicada", "puntos": 8, "detalle": "Está publicada o requiere revisión inmediata"})
     if any(k in text for k in ["garantía", "garantia", "visita a terreno"]):
@@ -328,7 +369,6 @@ def normalize(item: dict) -> dict:
     tipo = item.get("Tipo") or item.get("TipoLicitacion") or find_first(item, ["Tipo", "TipoLicitacion"]) or "Por confirmar"
     amount, tipo_monto, moneda = format_amount(item)
     score, breakdown = scoring_breakdown(item)
-    plazo_ejecucion = format_duration(item)
 
     return {
         "id": codigo,
@@ -341,7 +381,7 @@ def normalize(item: dict) -> dict:
         "fecha_inicio_preguntas": fecha_inicio_preguntas,
         "fecha_final_preguntas": fecha_final_preguntas,
         "fecha_adjudicacion": fecha_adjudicacion,
-        "plazo_ejecucion": plazo_ejecucion,
+        "plazo_ejecucion": format_duration(item),
         "monto_estimado": amount,
         "tipo_monto": tipo_monto,
         "moneda": moneda,
@@ -363,6 +403,18 @@ def normalize(item: dict) -> dict:
         "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
         "source": f"https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion={codigo}"
     }
+
+
+def is_available(row: dict) -> bool:
+    estado = str(row.get("estado", "")).lower()
+    if estado.startswith("demo"):
+        return True
+    if any(word in estado for word in CLOSED_STATE_WORDS):
+        return False
+    cierre = parse_date(row.get("fecha_cierre"))
+    if cierre is not None and cierre < today_date():
+        return False
+    return True
 
 
 def fetch_daily_licitaciones(fecha: str) -> list[dict]:
@@ -402,19 +454,23 @@ def main():
     for item in candidates[:40]:
         codigo = item.get("CodigoExterno") or item.get("Codigo") or item.get("codigo") or find_first(item, ["CodigoExterno", "Codigo", "codigo"])
         detail = fetch_detail(codigo)
-        enriched_item = merge_dicts(item, detail)
-        enriched.append(enriched_item)
+        enriched.append(merge_dicts(item, detail))
 
-    normalized = [normalize(item) for item in enriched]
-    normalized = merge_demo_rows(normalized)
+    normalized_all = [normalize(item) for item in enriched]
+    available = [row for row in normalized_all if is_available(row)]
+    normalized = merge_demo_rows(available)
     normalized.sort(key=lambda x: x["score"], reverse=True)
 
     if not normalized:
-        print(f"Sin oportunidades de mantención u obras civiles detectadas para {fecha}. Mantengo dataset existente.")
+        print(f"Sin oportunidades vigentes de mantención u obras civiles para {fecha}. Mantengo dataset existente.")
         return
 
     OUT.write_text(json.dumps(normalized, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Actualizadas {len(normalized)} oportunidades para {fecha}: {dt.datetime.now().isoformat()}")
+    print(
+        f"Actualizadas {len(normalized)} oportunidades vigentes para {fecha}. "
+        f"Filtradas vencidas/cerradas: {len(normalized_all) - len(available)}. "
+        f"Hora: {dt.datetime.now().isoformat()}"
+    )
 
 
 if __name__ == "__main__":
