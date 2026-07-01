@@ -4,7 +4,9 @@ Reporte Estado Pro - actualización diaria desde API Mercado Público.
 Uso previsto en GitHub Actions:
 1) Crear un secret de repositorio llamado MERCADO_PUBLICO_TICKET.
 2) El workflow ejecuta este script de lunes a viernes.
-3) El script consulta licitaciones del día, filtra rubros de mantención y obras civiles, y escribe dashboard/data/oportunidades_demo.json.
+3) El script consulta licitaciones del día, filtra rubros de mantención y obras civiles.
+4) Para cada oportunidad relevante consulta el detalle por código para rescatar monto, plazos y otros campos críticos.
+5) Escribe dashboard/data/oportunidades_demo.json.
 
 Nota: esta es una primera integración MVP. Debe validarse con el ticket real y con ejemplos actuales de la API.
 """
@@ -12,10 +14,12 @@ Nota: esta es una primera integración MVP. Debe validarse con el ticket real y 
 import datetime as dt
 import json
 import os
+import re
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "oportunidades_demo.json"
@@ -37,6 +41,16 @@ OBSERVATION_WORDS = [
     "permiso municipal", "recepción municipal", "recepcion municipal", "prevención de riesgos", "prevencion de riesgos"
 ]
 
+TIME_UNIT = {"1": "horas", "2": "días", "3": "semanas", "4": "meses", "5": "años"}
+MONEDA = {"CLP": "CLP", "CLF": "UF", "USD": "USD", "UTM": "UTM", "EUR": "EUR"}
+TIPO_MONTO = {"1": "Presupuesto disponible", "2": "Precio referencial"}
+MODALIDAD_PAGO = {
+    "1": "Pago a 30 días", "2": "Pago a 30, 60 y 90 días", "3": "Pago al día", "4": "Pago anual",
+    "5": "Pago a 60 días", "6": "Pagos mensuales", "7": "Pago contra entrega conforme",
+    "8": "Pago bimensual", "9": "Pago por estado de avance", "10": "Pago trimestral"
+}
+ESTADOS = {"5": "Publicada", "6": "Cerrada", "7": "Desierta", "8": "Adjudicada", "18": "Revocada", "19": "Suspendida"}
+
 DEMO_ROWS = [
     {
         "id": "DEMO-OC-001",
@@ -46,10 +60,21 @@ DEMO_ROWS = [
         "subrubro": "Obras civiles",
         "estado": "Demo / revisar oportunidad similar",
         "fecha_cierre": "Por confirmar",
-        "monto_estimado": "Por confirmar",
+        "plazo_ejecucion": "90 días corridos aprox. / validar en bases",
+        "fecha_adjudicacion": "Por confirmar",
+        "monto_estimado": "CLP 85.000.000 aprox. / demo",
+        "tipo_monto": "Presupuesto disponible / demo",
+        "moneda": "CLP",
+        "modalidad_pago": "Pago por estado de avance / demo",
         "tipo": "LE / LP",
         "score": 86,
         "semaforo": "Conviene",
+        "score_desglose": [
+            {"factor": "Base", "puntos": 50, "detalle": "Puntaje inicial"},
+            {"factor": "Obras civiles", "puntos": 17, "detalle": "Coincide con conservación/reparación de infraestructura"},
+            {"factor": "Publicada o de interés", "puntos": 8, "detalle": "Oportunidad apta para análisis comercial"},
+            {"factor": "Ajuste operativo", "puntos": 11, "detalle": "Monto y alcance relevantes para empresas medianas"}
+        ],
         "plazo_critico": "Validar visita a terreno, itemizado, cubicaciones y garantías",
         "observaciones_importantes": [
             "Puede exigir experiencia en obras civiles similares",
@@ -68,10 +93,20 @@ DEMO_ROWS = [
         "subrubro": "Obras civiles / obras menores",
         "estado": "Demo / oportunidad tipo",
         "fecha_cierre": "Por confirmar",
-        "monto_estimado": "Por confirmar",
+        "plazo_ejecucion": "45 a 60 días aprox. / validar en bases",
+        "fecha_adjudicacion": "Por confirmar",
+        "monto_estimado": "CLP 42.000.000 aprox. / demo",
+        "tipo_monto": "Precio referencial / demo",
+        "moneda": "CLP",
+        "modalidad_pago": "Contra entrega conforme / demo",
         "tipo": "LE",
         "score": 79,
         "semaforo": "Revisar",
+        "score_desglose": [
+            {"factor": "Base", "puntos": 50, "detalle": "Puntaje inicial"},
+            {"factor": "Obras civiles", "puntos": 17, "detalle": "Coincide con pavimentos/veredas/accesos"},
+            {"factor": "Ajuste operativo", "puntos": 12, "detalle": "Requiere validar margen, distancia y plazo"}
+        ],
         "plazo_critico": "Confirmar cubicaciones, especificaciones técnicas y visita a terreno",
         "observaciones_importantes": [
             "Puede requerir profesional responsable o experiencia acreditada",
@@ -86,16 +121,104 @@ DEMO_ROWS = [
 
 
 def today_cl_format() -> str:
-    """Formato usado por la API: ddmmyyyy."""
     return dt.datetime.now().strftime("%d%m%Y")
 
 
 def api_get(params: dict) -> dict:
     query = urllib.parse.urlencode(params)
     url = f"{API_BASE}?{query}"
-    req = urllib.request.Request(url, headers={"User-Agent": "ReporteEstadoPro/0.1"})
+    req = urllib.request.Request(url, headers={"User-Agent": "ReporteEstadoPro/0.2"})
     with urllib.request.urlopen(req, timeout=40) as response:
         return json.loads(response.read().decode("utf-8"))
+
+
+def norm_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", str(value).lower())
+
+
+def find_first(obj: Any, names: list[str]) -> Any:
+    targets = {norm_key(n) for n in names}
+    if isinstance(obj, dict):
+        for key, value in obj.items():
+            if norm_key(key) in targets and value not in (None, ""):
+                return value
+        for value in obj.values():
+            found = find_first(value, names)
+            if found not in (None, ""):
+                return found
+    elif isinstance(obj, list):
+        for item in obj:
+            found = find_first(item, names)
+            if found not in (None, ""):
+                return found
+    return None
+
+
+def first_listed(payload: Any) -> dict:
+    listado = payload.get("Listado") if isinstance(payload, dict) else None
+    if listado is None and isinstance(payload, dict):
+        listado = payload.get("listado")
+    if isinstance(listado, dict):
+        listado = listado.get("Licitacion") or listado.get("licitacion") or listado.get("Items") or []
+    if isinstance(listado, list) and listado:
+        return listado[0] if isinstance(listado[0], dict) else {}
+    return {}
+
+
+def format_number(value: Any) -> str:
+    if value in (None, ""):
+        return "Por confirmar"
+    try:
+        num = float(str(value).replace(",", "."))
+        if num.is_integer():
+            return f"{int(num):,}".replace(",", ".")
+        return f"{num:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    except Exception:
+        return str(value)
+
+
+def format_amount(item: dict) -> tuple[str, str, str]:
+    amount = find_first(item, ["MontoEstimado", "Monto", "MontoDisponible", "MontoTotalEstimado", "TotalEstimado"])
+    currency = find_first(item, ["Moneda", "CodigoMoneda", "UnidadMonetaria", "UnidadMoneda"])
+    amount_type = find_first(item, ["TipoMontoEstimado", "TipoMonto", "Estimacion", "TipoEstimacion"])
+    moneda = MONEDA.get(str(currency).upper(), str(currency or "CLP"))
+    tipo = TIPO_MONTO.get(str(amount_type), str(amount_type or "Por confirmar"))
+    if amount in (None, ""):
+        return "Por confirmar", tipo, moneda
+    return f"{moneda} {format_number(amount)}", tipo, moneda
+
+
+def format_duration(item: dict) -> str:
+    value = find_first(item, ["TiempoDuracionContrato", "DuracionContrato", "TiempoContrato", "PlazoEjecucion", "PlazoContrato"])
+    unit = find_first(item, ["UnidadTiempoDuracionContrato", "UnidadTiempo", "UnidadDuracionContrato", "UnidadPlazo"])
+    if value in (None, ""):
+        return "Por confirmar"
+    unit_text = TIME_UNIT.get(str(unit), str(unit or ""))
+    return f"{format_number(value)} {unit_text}".strip()
+
+
+def map_value(value: Any, mapping: dict[str, str]) -> str:
+    if value in (None, ""):
+        return "Por confirmar"
+    return mapping.get(str(value), str(value))
+
+
+def format_bool(value: Any) -> str:
+    if value in (None, ""):
+        return "Por confirmar"
+    text = str(value).strip().lower()
+    if text in {"1", "si", "sí", "true", "yes", "2"}:
+        return "Sí"
+    if text in {"0", "no", "false"}:
+        return "No"
+    return str(value)
+
+
+def get_state(item: dict) -> str:
+    estado = find_first(item, ["Estado", "CodigoEstado", "EstadoLicitacion"])
+    if estado in (None, ""):
+        return "Por confirmar"
+    return ESTADOS.get(str(estado), str(estado))
 
 
 def classify_subrubro(item: dict) -> str:
@@ -112,22 +235,28 @@ def has_relevant_fit(item: dict) -> bool:
     return any(word in text for words in KEYWORDS.values() for word in words)
 
 
-def score_item(item: dict) -> int:
+def scoring_breakdown(item: dict) -> tuple[int, list[dict]]:
     text = json.dumps(item, ensure_ascii=False).lower()
+    breakdown = [{"factor": "Base", "puntos": 50, "detalle": "Puntaje inicial para toda licitación detectada"}]
     score = 50
-    if any(k in text for k in KEYWORDS["Climatización"]):
-        score += 18
-    if any(k in text for k in KEYWORDS["Eléctrica / luminarias"]):
-        score += 16
-    if any(k in text for k in KEYWORDS["Mantención integral / obras menores"]):
-        score += 15
-    if any(k in text for k in KEYWORDS["Obras civiles"]):
-        score += 17
-    if "publicada" in text:
+    checks = [
+        ("Climatización", 18, KEYWORDS["Climatización"], "Coincide con climatización, aire acondicionado, chiller o calderas"),
+        ("Eléctrica / luminarias", 16, KEYWORDS["Eléctrica / luminarias"], "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"),
+        ("Mantención integral / obras menores", 15, KEYWORDS["Mantención integral / obras menores"], "Coincide con mantención integral, reparación u obras menores"),
+        ("Obras civiles", 17, KEYWORDS["Obras civiles"], "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"),
+    ]
+    for name, points, words, detail in checks:
+        if any(k in text for k in words):
+            score += points
+            breakdown.append({"factor": name, "puntos": points, "detalle": detail})
+    if "publicada" in text or "5" == str(find_first(item, ["Estado", "CodigoEstado"])):
         score += 8
+        breakdown.append({"factor": "Estado publicada", "puntos": 8, "detalle": "Está publicada o requiere revisión inmediata"})
     if any(k in text for k in ["garantía", "garantia", "visita a terreno"]):
         score -= 5
-    return max(0, min(score, 100))
+        breakdown.append({"factor": "Complejidad operativa", "puntos": -5, "detalle": "Puede exigir garantía o visita a terreno"})
+    score = max(0, min(score, 100))
+    return score, breakdown
 
 
 def semaforo(score: int) -> str:
@@ -144,13 +273,17 @@ def build_observations(item: dict) -> list[str]:
     for word in OBSERVATION_WORDS:
         if word in text:
             observations.append(f"Revisar posible requisito asociado a: {word}")
+    if format_duration(item) != "Por confirmar":
+        observations.append("Existe información de duración/plazo contractual; evaluar capacidad de ejecución")
+    if format_amount(item)[0] != "Por confirmar":
+        observations.append("Monto disponible detectado; validar si el margen justifica postulación")
     if not observations:
         observations = [
             "Validar requisitos técnicos en bases",
             "Validar garantías, anexos y experiencia solicitada",
             "Confirmar fecha de cierre, preguntas y visita a terreno"
         ]
-    return observations[:4]
+    return observations[:5]
 
 
 def get_nested(item: dict, *keys, default="Por confirmar"):
@@ -163,28 +296,68 @@ def get_nested(item: dict, *keys, default="Por confirmar"):
     return value or default
 
 
+def fetch_detail(codigo: str) -> dict:
+    if not codigo or codigo == "sin-id":
+        return {}
+    try:
+        payload = api_get({"codigo": codigo, "ticket": TICKET})
+        return first_listed(payload)
+    except Exception as exc:
+        print(f"No se pudo obtener detalle para {codigo}: {exc}")
+        return {}
+
+
+def merge_dicts(base: dict, detail: dict) -> dict:
+    merged = dict(base or {})
+    for key, value in (detail or {}).items():
+        if value not in (None, ""):
+            merged[key] = value
+    return merged
+
+
 def normalize(item: dict) -> dict:
-    score = score_item(item)
-    codigo = item.get("CodigoExterno") or item.get("Codigo") or item.get("codigo") or "sin-id"
-    titulo = item.get("Nombre") or item.get("nombre") or "Sin título"
+    codigo = item.get("CodigoExterno") or item.get("Codigo") or item.get("codigo") or find_first(item, ["CodigoExterno", "Codigo", "codigo"]) or "sin-id"
+    titulo = item.get("Nombre") or item.get("nombre") or find_first(item, ["Nombre", "NombreLicitacion"]) or "Sin título"
     comprador = get_nested(item, "Comprador", "NombreOrganismo")
-    estado = item.get("Estado") or item.get("estado") or "Por confirmar"
-    fecha_cierre = item.get("FechaCierre") or item.get("fechaCierre") or "Por confirmar"
-    tipo = item.get("Tipo") or item.get("TipoLicitacion") or "Por confirmar"
+    if comprador == "Por confirmar":
+        comprador = find_first(item, ["NombreOrganismo", "Organismo", "Comprador"]) or "Por confirmar"
+    fecha_cierre = find_first(item, ["FechaCierre", "fechaCierre"]) or "Por confirmar"
+    fecha_adjudicacion = find_first(item, ["FechaAdjudicacion", "FechaEstimadaAdjudicacion"]) or "Por confirmar"
+    fecha_inicio_preguntas = find_first(item, ["FechaInicioPreguntas"]) or "Por confirmar"
+    fecha_final_preguntas = find_first(item, ["FechaFinalPreguntas", "FechaFinPreguntas"]) or "Por confirmar"
+    tipo = item.get("Tipo") or item.get("TipoLicitacion") or find_first(item, ["Tipo", "TipoLicitacion"]) or "Por confirmar"
+    amount, tipo_monto, moneda = format_amount(item)
+    score, breakdown = scoring_breakdown(item)
+    plazo_ejecucion = format_duration(item)
 
     return {
         "id": codigo,
         "titulo": titulo,
         "comprador": comprador,
-        "region": "Por confirmar",
+        "region": find_first(item, ["Region", "RegionUnidad", "NombreRegion"]) or "Por confirmar",
         "subrubro": classify_subrubro(item),
-        "estado": estado,
+        "estado": get_state(item),
         "fecha_cierre": fecha_cierre,
-        "monto_estimado": "Por confirmar",
+        "fecha_inicio_preguntas": fecha_inicio_preguntas,
+        "fecha_final_preguntas": fecha_final_preguntas,
+        "fecha_adjudicacion": fecha_adjudicacion,
+        "plazo_ejecucion": plazo_ejecucion,
+        "monto_estimado": amount,
+        "tipo_monto": tipo_monto,
+        "moneda": moneda,
+        "modalidad_pago": map_value(find_first(item, ["ModalidadPago", "FormaPago", "CodigoModalidadPago"]), MODALIDAD_PAGO),
         "tipo": tipo,
+        "contrato": format_bool(find_first(item, ["Contrato"])),
+        "obras": format_bool(find_first(item, ["Obras"])),
+        "subcontratacion": format_bool(find_first(item, ["SubContratacion", "Subcontratacion"])),
+        "toma_razon": format_bool(find_first(item, ["TomaRazon"])),
+        "visibilidad_monto": format_bool(find_first(item, ["VisibilidadMonto"])),
+        "extension_plazo": format_bool(find_first(item, ["ExtensionPlazo"])),
+        "fuente_financiamiento": find_first(item, ["FuenteFinanciamiento"]) or "Por confirmar",
         "score": score,
         "semaforo": semaforo(score),
-        "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y antecedentes técnicos",
+        "score_desglose": breakdown,
+        "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
         "observaciones_importantes": build_observations(item),
         "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
         "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
@@ -224,8 +397,15 @@ def main():
         print(f"Error consultando API Mercado Público: {exc}")
         return
 
-    filtered = [item for item in raw_items if has_relevant_fit(item)]
-    normalized = [normalize(item) for item in filtered]
+    candidates = [item for item in raw_items if has_relevant_fit(item)]
+    enriched = []
+    for item in candidates[:40]:
+        codigo = item.get("CodigoExterno") or item.get("Codigo") or item.get("codigo") or find_first(item, ["CodigoExterno", "Codigo", "codigo"])
+        detail = fetch_detail(codigo)
+        enriched_item = merge_dicts(item, detail)
+        enriched.append(enriched_item)
+
+    normalized = [normalize(item) for item in enriched]
     normalized = merge_demo_rows(normalized)
     normalized.sort(key=lambda x: x["score"], reverse=True)
 
