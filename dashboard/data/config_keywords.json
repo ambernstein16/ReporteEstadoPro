@@ -1,6 +1,7 @@
 {
   "climatizacion": [
     "climatización",
+    "climatizacion",
     "aire acondicionado",
     "chiller",
     "caldera",
@@ -9,25 +10,60 @@
   ],
   "electrica": [
     "mantención eléctrica",
+    "mantencion electrica",
     "alumbrado público",
+    "alumbrado publico",
     "redes eléctricas",
+    "redes electricas",
     "tablero",
     "luminaria"
   ],
   "mantencion_integral": [
     "mantención integral",
+    "mantencion integral",
+    "mantenimiento integral",
     "obras menores",
     "reparación",
+    "reparacion",
     "edificio",
     "sala cuna",
-    "jardín infantil"
+    "jardín infantil",
+    "jardin infantil"
+  ],
+  "obras_civiles": [
+    "obras civiles",
+    "obra civil",
+    "conservación",
+    "conservacion",
+    "mejoramiento",
+    "reposición",
+    "reposicion",
+    "reparación de infraestructura",
+    "reparacion de infraestructura",
+    "pavimentos",
+    "veredas",
+    "cubierta",
+    "techumbre",
+    "demolición",
+    "demolicion",
+    "remodelación",
+    "remodelacion",
+    "habilitación",
+    "habilitacion",
+    "construcción",
+    "construccion"
   ],
   "observaciones_importantes": [
     "garantía",
+    "garantia",
     "visita a terreno",
     "experiencia",
     "certificación",
+    "certificacion",
     "registro de proveedores",
-    "beneficiarios finales"
+    "beneficiarios finales",
+    "permiso municipal",
+    "recepción municipal",
+    "prevención de riesgos"
   ]
 }
