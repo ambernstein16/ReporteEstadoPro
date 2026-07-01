@@ -20,5 +20,49 @@
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para rubro mantención; requiere revisión humana en piloto.",
     "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2710-27-LE26"
+  },
+  {
+    "id": "DEMO-OC-001",
+    "titulo": "Conservación y reparación de infraestructura municipal",
+    "comprador": "Municipalidad / demo comercial",
+    "region": "Metropolitana",
+    "subrubro": "Obras civiles",
+    "estado": "Demo / revisar oportunidad similar",
+    "fecha_cierre": "Por confirmar",
+    "monto_estimado": "Por confirmar",
+    "tipo": "LE / LP",
+    "score": 86,
+    "semaforo": "Conviene",
+    "plazo_critico": "Validar visita a terreno, itemizado, cubicaciones y garantías",
+    "observaciones_importantes": [
+      "Puede exigir experiencia en obras civiles similares",
+      "Revisar itemizado, plazo de ejecución y multas",
+      "Validar permisos, recepción y prevención de riesgos"
+    ],
+    "accion": "Solicitar revisión técnica del itemizado y confirmar capacidad de cuadrilla antes de ofertar.",
+    "fit": "Alta compatibilidad para empresas que ejecutan obras menores, conservación y reparación de infraestructura.",
+    "source": "https://www.mercadopublico.cl/"
+  },
+  {
+    "id": "DEMO-OC-002",
+    "titulo": "Mejoramiento de veredas, pavimentos y accesos en recinto público",
+    "comprador": "Organismo público / demo comercial",
+    "region": "Valparaíso",
+    "subrubro": "Obras civiles / obras menores",
+    "estado": "Demo / oportunidad tipo",
+    "fecha_cierre": "Por confirmar",
+    "monto_estimado": "Por confirmar",
+    "tipo": "LE",
+    "score": 79,
+    "semaforo": "Revisar",
+    "plazo_critico": "Confirmar cubicaciones, especificaciones técnicas y visita a terreno",
+    "observaciones_importantes": [
+      "Puede requerir profesional responsable o experiencia acreditada",
+      "Revisar garantías, seguros y prevención de riesgos",
+      "Confirmar disponibilidad de materiales y plazo de ejecución"
+    ],
+    "accion": "Revisar bases y decidir si conviene según plazo, distancia y margen esperado.",
+    "fit": "Buena oportunidad para empresas de obras civiles livianas y mantenimiento de infraestructura.",
+    "source": "https://www.mercadopublico.cl/"
   }
 ]
