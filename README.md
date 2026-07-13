@@ -11,8 +11,9 @@ Dashboard estático para validar comercialmente una solución B2B de oportunidad
 - `dashboard/scripts/update_data_active.py`: capturador automático con ventana móvil; consulta API, deduplica por código, filtra vigentes y enriquece con detalle.
 - `dashboard/scripts/update_data.py`: versión anterior de respaldo.
 - `dashboard/scripts/generate_reports.py`: genera reportes HTML y PDF por oportunidad.
+- `dashboard/scripts/validate_data_quality.py`: genera informe de calidad de datos para revisar si el MVP está listo para demo.
 - `.github/workflows/update-data.yml`: workflow programado para actualización diaria.
-- `reports/`: reportes HTML/PDF generados por licitación de interés.
+- `reports/`: reportes HTML/PDF generados por licitación de interés, más `data_quality.html`.
 - `report/`: reporte demo comercial original.
 
 ## Cómo publicarlo en GitHub Pages
@@ -43,8 +44,17 @@ El workflow actual usa `dashboard/scripts/update_data_active.py` y busca licitac
 4. Excluye licitaciones vencidas, cerradas, adjudicadas, desiertas, revocadas o suspendidas.
 5. Genera el JSON del dashboard.
 6. Genera reportes HTML/PDF por oportunidad vigente.
+7. Genera el informe `reports/data_quality.html` para revisar completitud de monto, fecha, plazo, fuente y posibles problemas.
 
 Al ejecutar manualmente el workflow puedes cambiar el parámetro `lookback_days`, por ejemplo 14, 21 o 30 días.
+
+## Revisión recomendada después de cada corrida
+
+1. Abrir el dashboard y confirmar que las oportunidades estén vigentes.
+2. Revisar que el monto y fecha de cierre aparezcan cuando Mercado Público los entregue.
+3. Abrir 2 o 3 reportes HTML/PDF y revisar si son entendibles comercialmente.
+4. Abrir `reports/data_quality.html` para ver qué campos faltan y qué licitaciones requieren revisión manual.
+5. Elegir 5 oportunidades buenas para usarlas en una demo comercial.
 
 ## Advertencias de uso
 
