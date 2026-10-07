@@ -1,153 +1,28 @@
 [
   {
-    "id": "29-95-LE26",
-    "titulo": "JBP MANTTO PREVENTIVO RECUPERATIVO CLIMATIZACIÓN",
-    "comprador": "FUERZA AEREA DE CHILE COMANDO LOGISTICO",
+    "id": "837-78-LP26",
+    "titulo": "CDP 372 SERVICIO MANTENIMIENTO PREVENTIVO Y CORRECTIVO CONVENIO DE SUMINISTROS DE SISTEMA DE RENOVACIÓN DE AIRE SALA DE AUTOPSIAS Y CLIMATIZACION DE SERVICIO MEDICO LEGAL DE CAÑETE.",
+    "comprador": "SERVICIO MEDICO LEGAL",
     "region": "Región Metropolitana de Santiago",
     "subrubro": "Climatización / Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-21T12:00:00",
+    "fecha_cierre": "2026-10-28T15:30:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-02T23:59:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
-    "moneda": "USD",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 100,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Climatización",
-        "puntos": 18,
-        "detalle": "Coincide con climatización, aire acondicionado, chiller o calderas"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=29-95-LE26"
-  },
-  {
-    "id": "2322-97-LP26",
-    "titulo": "CONSTRUCCION LUMINARIAS ORNAMENTALES EJE SANTIAGO-VALLENAR",
-    "comprador": "I MUNICIPALIDAD DE VALLENAR",
-    "region": "Región de Atacama ",
-    "subrubro": "Eléctrica / luminarias / Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-04T15:30:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-20T18:00:00",
-    "plazo_ejecucion": "150 horas",
-    "monto_estimado": "CLP 149.782.325",
-    "tipo_monto": "Precio referencial",
+    "fecha_adjudicacion": "2026-11-25T13:23:00",
+    "plazo_ejecucion": "24 horas",
+    "monto_estimado": "CLP 172.797.234",
+    "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
     "tipo": "LP",
     "contrato": "No",
-    "obras": "Sí",
+    "obras": "No",
     "subcontratacion": "Sí",
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "PMB",
-    "score": 100,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Eléctrica / luminarias",
-        "puntos": 16,
-        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2322-97-LP26"
-  },
-  {
-    "id": "2490-93-LE26",
-    "titulo": "MEJORAMIENTO SISTEMA DE CLIMATIZACIÓN EN HUB PROVI",
-    "comprador": "I MUNICIPALIDAD DE PROVIDENCIA",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Climatización / Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-28T15:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-31T20:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "Sí",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
     "extension_plazo": "Sí",
-    "fuente_financiamiento": "PRESUPUESTO MUNICIPAL",
+    "fuente_financiamiento": "Recursos Propios",
     "score": 100,
     "semaforo": "Conviene",
     "score_desglose": [
@@ -160,130 +35,6 @@
         "factor": "Climatización",
         "puntos": 18,
         "detalle": "Coincide con climatización, aire acondicionado, chiller o calderas"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2490-93-LE26"
-  },
-  {
-    "id": "1426397-28-LP26",
-    "titulo": "KJC ADQ MANTENCIÓN Y REPARACIÓN DE INFRAESTRUCTURA",
-    "comprador": "Servicio Local de Educación Pública Iquique",
-    "region": "Región de Tarapacá  ",
-    "subrubro": "Climatización / Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-26T17:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-23T16:00:00",
-    "plazo_ejecucion": "2 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "No",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 100,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Climatización",
-        "puntos": 18,
-        "detalle": "Coincide con climatización, aire acondicionado, chiller o calderas"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1426397-28-LP26"
-  },
-  {
-    "id": "2697-58-LP26",
-    "titulo": "MEJORAMIENTO ACERA NORTE ACCESO ORIENTE DE AV CARTAGENA",
-    "comprador": "I MUNICIPALIDAD DE CARTAGENA",
-    "region": "Región de Valparaíso ",
-    "subrubro": "Eléctrica / luminarias / Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-30T15:11:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-04T17:30:00",
-    "plazo_ejecucion": "180 horas",
-    "monto_estimado": "CLP 330.997.439",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "Sí",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "FRIL - GORE",
-    "score": 100,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Eléctrica / luminarias",
-        "puntos": 16,
-        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
       },
       {
         "factor": "Mantención integral / obras menores",
@@ -309,33 +60,91 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2697-58-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=837-78-LP26"
   },
   {
-    "id": "45-50-LE26",
-    "titulo": "SERVICIOS GENERALES DE MANTENCIÓN PREVENTIVA Y CORRECTIVA DE EQUIPAMIENTO DE AIRE DE PRECISIÓN TABLEROS ELÉCTRICOS Y SISTEMA DE ALIMENTACIÓN ELÉCTRICA ININTERRUMPIDA DE PODER UPS Y TABLERO BY PASS PARA ÁREA DE DATA CENTER DE SENCE",
-    "comprador": "SERVICIO NACIONAL DE CAPACITACION Y EMPLEO",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Climatización / Eléctrica / luminarias / Obras civiles",
+    "id": "4238-80-L126",
+    "titulo": "INSUMOS PGMA. REHABILITACION INTEGRAL AÑO 2026",
+    "comprador": "I MUNICIPALIDAD DE CURANILAHUE",
+    "region": "Región del Biobío ",
+    "subrubro": "Eléctrica / luminarias / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-21T15:01:00",
+    "fecha_cierre": "2026-10-15T09:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-20T18:00:00",
+    "fecha_adjudicacion": "2026-11-05T17:00:00",
+    "plazo_ejecucion": "0 horas",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "L1",
+    "contrato": "No",
+    "obras": "No",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "Por confirmar",
+    "score": 91,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Eléctrica / luminarias",
+        "puntos": 16,
+        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: certificación",
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4238-80-L126"
+  },
+  {
+    "id": "5053-118-LE26",
+    "titulo": "MANTENIMIENTO PREVENTIVO- SISTEMA DE CLIMATIZACIÓN DEL RESONADOR MAGNÉTICO",
+    "comprador": "SERVICIO DE SALUD DEL MAULE HOSPITAL DE TALCA",
+    "region": "Región del Maule ",
+    "subrubro": "Climatización / Mantención integral / obras menores",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-13T18:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-11-12T19:00:00",
     "plazo_ejecucion": "12 horas",
-    "monto_estimado": "CLP 60.000.000",
-    "tipo_monto": "Presupuesto disponible",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Precio referencial",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
     "tipo": "LE",
     "contrato": "Sí",
     "obras": "No",
-    "subcontratacion": "Sí",
+    "subcontratacion": "No",
     "toma_razon": "No",
-    "visibilidad_monto": "Sí",
+    "visibilidad_monto": "No",
     "extension_plazo": "No",
-    "fuente_financiamiento": "Servicio Nacional de Capacitación y Empleo",
-    "score": 100,
+    "fuente_financiamiento": "Hospital Regional de Talca",
+    "score": 91,
     "semaforo": "Conviene",
     "score_desglose": [
       {
@@ -349,257 +158,9 @@
         "detalle": "Coincide con climatización, aire acondicionado, chiller o calderas"
       },
       {
-        "factor": "Eléctrica / luminarias",
-        "puntos": 16,
-        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      },
-      {
-        "factor": "Complejidad operativa",
-        "puntos": -5,
-        "detalle": "Puede exigir garantía o visita a terreno"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: garantía",
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=45-50-LE26"
-  },
-  {
-    "id": "2322-96-LP26",
-    "titulo": "CONSTRUCCION LUMINARIAS ORNAMENTALES EJE SERRANO -VALLENAR ",
-    "comprador": "I MUNICIPALIDAD DE VALLENAR",
-    "region": "Región de Atacama ",
-    "subrubro": "Eléctrica / luminarias / Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-04T15:30:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-20T18:00:00",
-    "plazo_ejecucion": "120 horas",
-    "monto_estimado": "CLP 111.926.194",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "Sí",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "PMB",
-    "score": 100,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Eléctrica / luminarias",
-        "puntos": 16,
-        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
-      },
-      {
         "factor": "Mantención integral / obras menores",
         "puntos": 15,
         "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2322-96-LP26"
-  },
-  {
-    "id": "2591-179-LP26",
-    "titulo": "CONSTRUCCION MULTICANCHA SALAR DE LLAMARA POZO ALMONTE",
-    "comprador": "ILUSTRE MUNICIPALIDAD DE POZO ALMONTE",
-    "region": "Región de Tarapacá  ",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-06T15:10:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-08T18:00:00",
-    "plazo_ejecucion": "17 horas",
-    "monto_estimado": "CLP 222.472.000",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "Sí",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "FRIL GOBIERNO REGIONAL ",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2591-179-LP26"
-  },
-  {
-    "id": "2817-67-LE26",
-    "titulo": "REP. CUBIERTA GALPON INTERIOR FERIA EL TRAPICHE",
-    "comprador": "I MUNICIPALIDAD DE SAN FERNANDO",
-    "region": "Región del Libertador General Bernardo O´Higgins",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T20:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-10-20T20:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 32.462.795",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "MUNICIPALIDAD DE SAN FERNANDO",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2817-67-LE26"
-  },
-  {
-    "id": "1305525-44-LP26",
-    "titulo": "OBRAS CONSERVACIÓN C. EDUCACIONAL SARGENTO ALDEA",
-    "comprador": "SERVICIO LOCAL DE EDUCACIÓN PÚBLICA DE COSTA CENTRAL",
-    "region": "Región de Valparaíso ",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-02T15:30:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-30T18:38:00",
-    "plazo_ejecucion": "6 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "Sí",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "Sí",
-    "fuente_financiamiento": "FONDOS MIEP",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
       },
       {
         "factor": "Estado publicada",
@@ -614,253 +175,22 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1305525-44-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5053-118-LE26"
   },
   {
-    "id": "1417913-139-E226",
-    "titulo": "OBRAS MENORES DE REPARACIÓN DE CAÑERÍA HDPE CESFAM AGUIRRE Y REPOSICIÓN DE PUERTAS VAIVÉN SAR CESFAM SUR",
-    "comprador": "CORP MUNICIPAL DE DESARROLLO SOCIAL DE IQUIQUE",
-    "region": "Región de Tarapacá  ",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-14T09:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-14T22:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "E2",
-    "contrato": "No",
-    "obras": "No",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "PRESUPUESTO CORMUDESI",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1417913-139-E226"
-  },
-  {
-    "id": "1536-7-LE26",
-    "titulo": "REPOSICION RED DE ALCANTARILLADO CF SAN SEBASTIAN",
-    "comprador": "DELEGACIÓN PRESIDENCIAL PROVINCIAL DE TIERRA DEL FUEGO",
-    "region": "Región de Magallanes y de la Antártica",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T14:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-10-23T19:57:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 49.290.250",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Pasos Fronterizos",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1536-7-LE26"
-  },
-  {
-    "id": "1540667-10-B226",
-    "titulo": "REMODELACIÓN SERVICIO DIETÉTICO DE LECHE",
-    "comprador": "UNIVERSIDAD DE CHILE",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-27T17:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2027-01-25T17:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 125.000.000",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "B2",
-    "contrato": "No",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "Sí",
-    "fuente_financiamiento": "UNIVERSIDAD DE CHILE",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1540667-10-B226"
-  },
-  {
-    "id": "2012-6-LP26",
-    "titulo": "Servicio Mantención techumbre C F El Límite",
+    "id": "552010-9-LE26",
+    "titulo": "SERVICIO DE CONSTRUCCION INFRAESTRUCTURA EL LIMITE",
     "comprador": "DELEGACIÓN PRESIDENCIAL PROVINCIAL DE PALENA",
     "region": "Región de los Lagos ",
     "subrubro": "Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-28T14:00:00",
+    "fecha_cierre": "2026-10-23T15:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-03T15:00:00",
+    "fecha_adjudicacion": "2026-10-29T15:00:00",
     "plazo_ejecucion": "0 días",
-    "monto_estimado": "CLP 190.000.000",
+    "monto_estimado": "CLP 50.000.000",
     "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Fondos Presupuesto Corriente UPF Palena",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2012-6-LP26"
-  },
-  {
-    "id": "5053-110-LE26",
-    "titulo": "REPARACION EQUIPOS UNIDAD DE INGENIERIA CLINICA",
-    "comprador": "SERVICIO DE SALUD DEL MAULE HOSPITAL DE TALCA",
-    "region": "Región del Maule ",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T16:37:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-10-19T16:38:00",
-    "plazo_ejecucion": "3 horas",
-    "monto_estimado": "CLP 28.840.496",
-    "tipo_monto": "Precio referencial",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
     "tipo": "LE",
@@ -870,7 +200,7 @@
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
     "extension_plazo": "No",
-    "fuente_financiamiento": "RECURSOS PROPIOS",
+    "fuente_financiamiento": "FONDOS PRESUPUESTO CORRIENTE",
     "score": 90,
     "semaforo": "Conviene",
     "score_desglose": [
@@ -903,148 +233,32 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5053-110-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=552010-9-LE26"
   },
   {
-    "id": "5282-42-LE26",
-    "titulo": "Construcción  Letreros de Bienvenida Porvenir",
-    "comprador": "I.MUNICIPALIDAD DE PORVENIR",
-    "region": "Región de Magallanes y de la Antártica",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-05T09:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-27T15:00:00",
-    "plazo_ejecucion": "120 horas",
-    "monto_estimado": "CLP 50.686.000",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "Sí",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "GOBIERNO REGIONAL",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5282-42-LE26"
-  },
-  {
-    "id": "5512-10-LP26",
-    "titulo": "Mejoramiento  Canchas Exteriores  Complejo Deportivo Campus Saucache UTA 2493”",
-    "comprador": "UNIVERSIDAD DE TARAPACA",
+    "id": "5858-12-LE26",
+    "titulo": "CONSTRUCCIÓN SERVICIO HIGIÉNICO PÚBLICO GUATANAVE",
+    "comprador": "Ilustre Municipalidad de Camarones",
     "region": "Región de Arica y Parinacota",
     "subrubro": "Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-11-04T16:00:00",
+    "fecha_cierre": "2026-10-21T15:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2027-02-01T18:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 140.000.000",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "4567",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5512-10-LP26"
-  },
-  {
-    "id": "739231-21-LP26",
-    "titulo": "MEJORAMIENTO PLAZA AGUAS BUENAS COMUNA DE PUERTO OCTAY",
-    "comprador": "I MUNICIPALIDAD PUERTO OCTAY",
-    "region": "Región de los Lagos ",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-06T15:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-30T19:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 130.000.000",
+    "fecha_adjudicacion": "2026-10-30T15:00:00",
+    "plazo_ejecucion": "120 horas",
+    "monto_estimado": "Por confirmar",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
+    "tipo": "LE",
+    "contrato": "Sí",
     "obras": "No",
-    "subcontratacion": "Sí",
+    "subcontratacion": "No",
     "toma_razon": "No",
-    "visibilidad_monto": "Sí",
+    "visibilidad_monto": "No",
     "extension_plazo": "No",
-    "fuente_financiamiento": "Por confirmar",
+    "fuente_financiamiento": "Ilustre Municipalidada de Camarones",
     "score": 90,
     "semaforo": "Conviene",
     "score_desglose": [
@@ -1072,25 +286,24 @@
     "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
     "observaciones_importantes": [
       "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=739231-21-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5858-12-LE26"
   },
   {
-    "id": "4920-13-CO26",
-    "titulo": "INSTALACIÓN DE CÁMARAS LECTORAS DE PATENTES Y MEJORAMIENTO DE SALA DE MONITOREO COMUNA DE ROMERAL",
-    "comprador": "I.MUNICIPALIDAD DE ROMERAL",
-    "region": "Región del Maule ",
+    "id": "1375760-11-CO26",
+    "titulo": "SERVICIO DE HABILITACIÓN DE INSTALACIONES SLEPVC",
+    "comprador": "SERVICIO LOCAL DE EDUCACIÓN PÚBLICA VALLE CACHAPOAL",
+    "region": "Región del Libertador General Bernardo O´Higgins",
     "subrubro": "Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-22T12:00:00",
+    "fecha_cierre": "2026-10-22T15:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-20T12:00:00",
-    "plazo_ejecucion": "0 horas",
+    "fecha_adjudicacion": "2026-11-20T18:00:00",
+    "plazo_ejecucion": "45 días",
     "monto_estimado": "Por confirmar",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
@@ -1102,6 +315,352 @@
     "toma_razon": "No",
     "visibilidad_monto": "No",
     "extension_plazo": "No",
+    "fuente_financiamiento": "Presupuesto SLEP P01",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1375760-11-CO26"
+  },
+  {
+    "id": "1133353-49-LP26",
+    "titulo": "REPOSICIÓN VEREDAS Y ACCESIBILIDAD UNIVERSAL AVENIDA BALMACEDA RAUCO",
+    "comprador": "I MUNICIPALIDAD DE RAUCO",
+    "region": "Región del Maule ",
+    "subrubro": "Mantención integral / obras menores / Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-11-06T16:30:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-12-14T17:30:00",
+    "plazo_ejecucion": "120 horas",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "LP",
+    "contrato": "No",
+    "obras": "No",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "GOBIERNO REGIONAL DEL MAULE",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Revisar posible requisito asociado a: recepción municipal",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1133353-49-LP26"
+  },
+  {
+    "id": "3768-19-LP26",
+    "titulo": "MEJORAMIENTO EDIFICIO MUNICIPAL COMUNA DE QUINCHAO",
+    "comprador": "I MUNICIPALIDAD DE QUINCHAO",
+    "region": "Región de los Lagos ",
+    "subrubro": "Mantención integral / obras menores / Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-11-04T15:30:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-12-31T10:00:00",
+    "plazo_ejecucion": "0 horas",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "LP",
+    "contrato": "No",
+    "obras": "Sí",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "PMU - SUBDERE",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3768-19-LP26"
+  },
+  {
+    "id": "3997-61-LP26",
+    "titulo": "Mejoramiento Espacio Publico Rincón Cultural",
+    "comprador": "I MUNICIPALIDAD DE COLTAUCO",
+    "region": "Región del Libertador General Bernardo O´Higgins",
+    "subrubro": "Mantención integral / obras menores / Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-21T19:57:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-11-26T19:58:00",
+    "plazo_ejecucion": "0 horas",
+    "monto_estimado": "CLP 71.000.000",
+    "tipo_monto": "Precio referencial",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "LP",
+    "contrato": "No",
+    "obras": "Sí",
+    "subcontratacion": "Sí",
+    "toma_razon": "No",
+    "visibilidad_monto": "Sí",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "SUBDERE Programa Mejoramiento Urbano  PMU",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
+      "Monto disponible detectado; validar si el margen justifica postulación"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3997-61-LP26"
+  },
+  {
+    "id": "3654-38-L126",
+    "titulo": "SERVICIO DE REMODELACIÓN Y MEJORAMIENTO DE LA CUBIERTA DE PIZARREÑO POR UNA CUBIERTA DE ZINC PARA LA CASA HABITACIÓN UBICADA EN RUTA 68 KM. 20 PUDAHUEL PREDIO MILITAR LO AGUIRRE, CONFORME A ESPECIFICACIONES TÉCNICAS ADJUNTAS EN PDF.",
+    "comprador": "DIVISION LOGISTICA DEL EJERCITO",
+    "region": "Región Metropolitana de Santiago",
+    "subrubro": "Mantención integral / obras menores / Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-15T15:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-10-29T18:43:00",
+    "plazo_ejecucion": "0 días",
+    "monto_estimado": "CLP 7.000.000",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "L1",
+    "contrato": "No",
+    "obras": "No",
+    "subcontratacion": "Sí",
+    "toma_razon": "No",
+    "visibilidad_monto": "Sí",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "Por confirmar",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
+      "Monto disponible detectado; validar si el margen justifica postulación"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3654-38-L126"
+  },
+  {
+    "id": "5041-13-LE26",
+    "titulo": "Suministro Hormigón mejoramientos en Quillón",
+    "comprador": "ILUSTRE MUNICIPALIDAD DE QUILLON",
+    "region": "Región del Ñuble",
+    "subrubro": "Mantención integral / obras menores / Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-20T13:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-10-30T17:30:00",
+    "plazo_ejecucion": "2 días",
+    "monto_estimado": "CLP 20.000.000",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "LE",
+    "contrato": "Sí",
+    "obras": "No",
+    "subcontratacion": "Sí",
+    "toma_razon": "No",
+    "visibilidad_monto": "Sí",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "I. Municipalidad de Quillón",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
+      "Monto disponible detectado; validar si el margen justifica postulación"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5041-13-LE26"
+  },
+  {
+    "id": "2173-33-LP26",
+    "titulo": "OBRAS DE CIERRE PERIMETRAL FACHADAS DE EDIFICIOS",
+    "comprador": "CORP ADMINISTRATIVA DEL PODER JUDICIAL",
+    "region": "Región Metropolitana de Santiago",
+    "subrubro": "Mantención integral / obras menores / Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-11-09T15:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2027-01-19T12:13:00",
+    "plazo_ejecucion": "0 horas",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Precio referencial",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "LP",
+    "contrato": "No",
+    "obras": "No",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "Sí",
     "fuente_financiamiento": "Por confirmar",
     "score": 90,
     "semaforo": "Conviene",
@@ -1134,79 +693,21 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4920-13-CO26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2173-33-LP26"
   },
   {
-    "id": "673-4-LE26",
-    "titulo": "SERVICIO DE PINTURA EXTERIOR Y MEJORAMIENTO",
-    "comprador": "MINISTERIO DE BIENES NACIONALES",
+    "id": "3729-94-LE26",
+    "titulo": "CONSTRUCCIÓN CIERRE PERIMETRAL LONGITUDINAL NORTE LOTE RESERVA SERVIU A TERRENO LOS COPIHUES",
+    "comprador": "I MUNICIPALIDAD DE CHIMBARONGO",
     "region": "Región del Libertador General Bernardo O´Higgins",
     "subrubro": "Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-20T15:00:00",
+    "fecha_cierre": "2026-10-19T15:30:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-10-27T18:00:00",
-    "plazo_ejecucion": "15 horas",
-    "monto_estimado": "CLP 9.682.432",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "Sí",
-    "fuente_financiamiento": "22.06.001",
-    "score": 90,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=673-4-LE26"
-  },
-  {
-    "id": "885-92-LE26",
-    "titulo": "SERVICIO DE SUMINISTRO E INSTALACIÓN DE VIDRIOS EN EDIFICIOS INSTITUCIONALES UBICADOS EN TEATINOS N°56 TEATINOS N°78 AMANDA LABARCA N°65 Y ROBERTO ESPINOZA N°1256 SANTIAGO.",
-    "comprador": "CONTRALORIA GENERAL DE LA REPUBLICA",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T16:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-16T19:53:00",
-    "plazo_ejecucion": "24 horas",
-    "monto_estimado": "CLP 30.000.000",
+    "fecha_adjudicacion": "2026-11-19T15:30:00",
+    "plazo_ejecucion": "70 horas",
+    "monto_estimado": "CLP 15.000.000",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
@@ -1217,7 +718,7 @@
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
     "extension_plazo": "No",
-    "fuente_financiamiento": "Por confirmar",
+    "fuente_financiamiento": "Presupuesto Municipal vigente",
     "score": 90,
     "semaforo": "Conviene",
     "score_desglose": [
@@ -1250,21 +751,21 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=885-92-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3729-94-LE26"
   },
   {
-    "id": "2042-15-LP26",
-    "titulo": "Construcción multicancha Sector Rincón Alto Tortel",
-    "comprador": "Ilustre Municipalidad de Tortel",
-    "region": "Región Aysén del General Carlos Ibáñez del Campo",
+    "id": "3082-11-LP26",
+    "titulo": "Construcción Salones multiuso Clubes Deportivos",
+    "comprador": "I MUNICIPALIDAD DE PANQUEHUE",
+    "region": "Región de Valparaíso ",
     "subrubro": "Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-11-05T19:00:00",
+    "fecha_cierre": "2026-10-28T12:17:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-20T19:54:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 337.000.000",
+    "fecha_adjudicacion": "2026-11-11T18:00:00",
+    "plazo_ejecucion": "120 horas",
+    "monto_estimado": "CLP 175.623.727",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
@@ -1275,7 +776,7 @@
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
     "extension_plazo": "No",
-    "fuente_financiamiento": "FRIL",
+    "fuente_financiamiento": "GORE - FNDR - FRIL",
     "score": 90,
     "semaforo": "Conviene",
     "score_desglose": [
@@ -1308,21 +809,79 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2042-15-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3082-11-LP26"
   },
   {
-    "id": "3100-6-LE26",
-    "titulo": "SERVICIO DE MANTENIMIENTO Y REPARACIÓN DEL LAVADER",
-    "comprador": "DIRECCION DE ABASTECIMIENTO DE LA ARMADA",
-    "region": "Región de Tarapacá  ",
+    "id": "653-20-O126",
+    "titulo": "Reparación de Viviendas Adulto Mayor Damnificados por incendio_ Curico",
+    "comprador": "SERVICIO DE VIVIENDA Y URBANIZACION VII REGION",
+    "region": "Región del Maule ",
     "subrubro": "Mantención integral / obras menores / Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-21T12:11:00",
+    "fecha_cierre": "2026-10-30T10:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-10-22T12:12:00",
+    "fecha_adjudicacion": "2026-11-30T18:00:00",
     "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 12.000.000",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Por confirmar",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "O1",
+    "contrato": "No",
+    "obras": "Sí",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "Seguro",
+    "score": 90,
+    "semaforo": "Conviene",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: seguro",
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=653-20-O126"
+  },
+  {
+    "id": "3764-56-LE26",
+    "titulo": "SUM. MANTENCIÓN Y REPARACIÓN ALUMBRADO PÚBLICO",
+    "comprador": "I MUNICIPALIDAD DE NANCAGUA",
+    "region": "Región del Libertador General Bernardo O´Higgins",
+    "subrubro": "Eléctrica / luminarias / Mantención integral / obras menores",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-19T15:02:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-10-23T15:08:00",
+    "plazo_ejecucion": "3 horas",
+    "monto_estimado": "CLP 10.000.000",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
@@ -1333,8 +892,8 @@
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
     "extension_plazo": "No",
-    "fuente_financiamiento": "AFL PESOS",
-    "score": 90,
+    "fuente_financiamiento": "PRESUPUESTO MUNICIPAL 2026",
+    "score": 89,
     "semaforo": "Conviene",
     "score_desglose": [
       {
@@ -1343,14 +902,14 @@
         "detalle": "Puntaje inicial para toda licitación detectada"
       },
       {
+        "factor": "Eléctrica / luminarias",
+        "puntos": 16,
+        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
+      },
+      {
         "factor": "Mantención integral / obras menores",
         "puntos": 15,
         "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
       },
       {
         "factor": "Estado publicada",
@@ -1366,7 +925,7 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3100-6-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3764-56-LE26"
   },
   {
     "id": "DEMO-OC-001",
@@ -1427,111 +986,6 @@
     "source": "https://www.mercadopublico.cl/"
   },
   {
-    "id": "1607-12-LE26",
-    "titulo": "Servicio mantención equipos de climatización",
-    "comprador": "SUPERINTENDENCIA DE SEGURIDAD SOCIAL",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Climatización / Mantención integral / obras menores",
-    "estado": "15",
-    "fecha_cierre": "2026-10-06T08:43:51.217",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-09-30T19:56:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 60.000.000",
-    "tipo_monto": "Presupuesto disponible",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "21796",
-    "score": 83,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Climatización",
-        "puntos": 18,
-        "detalle": "Coincide con climatización, aire acondicionado, chiller o calderas"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1607-12-LE26"
-  },
-  {
-    "id": "2172-13-LE26",
-    "titulo": "LE 4955 -Mantención y obras menores SII DR Copiapó",
-    "comprador": "SERVICIO DE IMPUESTOS INTERNOS DIRECCION",
-    "region": "Región de Atacama ",
-    "subrubro": "Mantención integral / obras menores / Obras civiles",
-    "estado": "15",
-    "fecha_cierre": "2026-10-06T12:34:38.427",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-10-21T18:30:00",
-    "plazo_ejecucion": "24 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Subtítulo 22",
-    "score": 82,
-    "semaforo": "Conviene",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2172-13-LE26"
-  },
-  {
     "id": "DEMO-OC-002",
     "titulo": "Mejoramiento de veredas, pavimentos y accesos en recinto público",
     "comprador": "Organismo público / demo comercial",
@@ -1585,29 +1039,29 @@
     "source": "https://www.mercadopublico.cl/"
   },
   {
-    "id": "1202333-94-LE26",
-    "titulo": "ESTUDIO DE MECANICA DE SUELO PARA PROYECTOS CUBIERTAS MULTICANCHAS PISTA DE PATINAJE Y CENTROS RECREATIVOS DE LONCURA QUINTERO",
-    "comprador": "I MUNICIPALIDAD DE QUINTERO",
-    "region": "Región de Valparaíso ",
+    "id": "4236-26-LE26",
+    "titulo": "MEJORAMIENTO Y AMPLIACION DE VIVIENDAS DE BENEFICIARIOS PROGRAMA HABITABILIDAD CONVENIO 2025-2026",
+    "comprador": "Por confirmar",
+    "region": "Por confirmar",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T19:55:00",
+    "fecha_cierre": "2026-10-19T15:11:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-19T19:56:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 15.000.000",
-    "tipo_monto": "Presupuesto disponible",
+    "fecha_adjudicacion": "Por confirmar",
+    "plazo_ejecucion": "Por confirmar",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Por confirmar",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "LE",
-    "contrato": "Sí",
-    "obras": "No",
-    "subcontratacion": "Sí",
-    "toma_razon": "No",
-    "visibilidad_monto": "Sí",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Presupuesto Municipal Vigente",
+    "tipo": "Por confirmar",
+    "contrato": "Por confirmar",
+    "obras": "Por confirmar",
+    "subcontratacion": "Por confirmar",
+    "toma_razon": "Por confirmar",
+    "visibilidad_monto": "Por confirmar",
+    "extension_plazo": "Por confirmar",
+    "fuente_financiamiento": "Por confirmar",
     "score": 75,
     "semaforo": "Revisar",
     "score_desglose": [
@@ -1629,38 +1083,38 @@
     ],
     "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
     "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
-      "Monto disponible detectado; validar si el margen justifica postulación"
+      "Validar requisitos técnicos en bases",
+      "Validar garantías, anexos y experiencia solicitada",
+      "Confirmar fecha de cierre, preguntas y visita a terreno"
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1202333-94-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4236-26-LE26"
   },
   {
-    "id": "1057417-263-CO26",
-    "titulo": "SERVICIO DE RECONSTRUCCIÓN DE TRÁNSITO INTESTINAL Y CIRUGÍAS COLOPROCTOLÓGICAS ASOCIADAS.",
-    "comprador": "COMPLEJO ASISTENCIAL DR.VICTOR RIOS RUIZ",
+    "id": "707422-33-LE26",
+    "titulo": "REPOSICIÓN SISTEMA ELÉCTRICO JI LAS ARAUCARIAS",
+    "comprador": "FUNDACION EDUCACIONAL PARA EL DESAROLLO INTEGRAL DE LA NIÑEZ",
     "region": "Región del Biobío ",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T15:30:00",
+    "fecha_cierre": "2026-10-21T15:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-16T18:00:00",
-    "plazo_ejecucion": "12 horas",
+    "fecha_adjudicacion": "2026-11-10T15:00:00",
+    "plazo_ejecucion": "0 días",
     "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
+    "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "CO",
-    "contrato": "No",
+    "tipo": "LE",
+    "contrato": "Sí",
     "obras": "No",
     "subcontratacion": "No",
     "toma_razon": "No",
     "visibilidad_monto": "No",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Complejo Asistencial Víctor Ríos Ruiz",
+    "extension_plazo": "Sí",
+    "fuente_financiamiento": "1-01",
     "score": 75,
     "semaforo": "Revisar",
     "score_desglose": [
@@ -1687,19 +1141,70 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1057417-263-CO26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=707422-33-LE26"
   },
   {
-    "id": "1265-6-O126",
-    "titulo": "Conservación Caleta Pichidangui, Comuna Los Vilos",
+    "id": "4113-56-LP26",
+    "titulo": "LICITACION REPOSICIÓN PLAZOLETA VILLA EL MIRADOR",
+    "comprador": "Por confirmar",
+    "region": "Por confirmar",
+    "subrubro": "Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-11-06T15:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "Por confirmar",
+    "plazo_ejecucion": "Por confirmar",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Por confirmar",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "Por confirmar",
+    "contrato": "Por confirmar",
+    "obras": "Por confirmar",
+    "subcontratacion": "Por confirmar",
+    "toma_razon": "Por confirmar",
+    "visibilidad_monto": "Por confirmar",
+    "extension_plazo": "Por confirmar",
+    "fuente_financiamiento": "Por confirmar",
+    "score": 75,
+    "semaforo": "Revisar",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4113-56-LP26"
+  },
+  {
+    "id": "1265-7-O126",
+    "titulo": "Conservación Caleta Puerto Aldea, Coquimbo",
     "comprador": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
     "region": "Región de Coquimbo ",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-23T10:30:00",
+    "fecha_cierre": "2026-10-26T15:05:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-15T10:08:00",
+    "fecha_adjudicacion": "2026-12-15T17:16:00",
     "plazo_ejecucion": "0 horas",
     "monto_estimado": "Por confirmar",
     "tipo_monto": "Por confirmar",
@@ -1739,85 +1244,32 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1265-6-O126"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1265-7-O126"
   },
   {
-    "id": "1506-35-O126",
-    "titulo": "CONSERVACIÓN DE RIBERAS CUENCA RIO MAULE PE 2027",
-    "comprador": "Por confirmar",
-    "region": "Por confirmar",
+    "id": "1660-153-L126",
+    "titulo": "COMPRA DE SERVICIO ADMINISTRATIVO PARA EL HOSPITAL DE SALAMANCA, PARA APOYO A LA GESTIÓN/ MEJORAMIENTO",
+    "comprador": "SERVICIO SALUD COQUIMBO HOSP DE SALAMANC",
+    "region": "Región de Coquimbo ",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-21T10:00:00",
+    "fecha_cierre": "2026-10-19T15:02:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "Por confirmar",
-    "plazo_ejecucion": "Por confirmar",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Por confirmar",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "Por confirmar",
-    "contrato": "Por confirmar",
-    "obras": "Por confirmar",
-    "subcontratacion": "Por confirmar",
-    "toma_razon": "Por confirmar",
-    "visibilidad_monto": "Por confirmar",
-    "extension_plazo": "Por confirmar",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 75,
-    "semaforo": "Revisar",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Validar requisitos técnicos en bases",
-      "Validar garantías, anexos y experiencia solicitada",
-      "Confirmar fecha de cierre, preguntas y visita a terreno"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1506-35-O126"
-  },
-  {
-    "id": "2667-97-LP26",
-    "titulo": "SERVICIO DE PRESTACIONES DE KINESIOLOGÍA YO REHABILITACIÓN PARA VECINOS DE LA COMUNA DE VITACURA CON VULNERABILIDAD MANIFIESTA",
-    "comprador": "I MUNICIPALIDAD DE VITACURA",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-04T15:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2027-01-11T17:00:00",
-    "plazo_ejecucion": "24 horas",
-    "monto_estimado": "CLP 240.000.000",
+    "fecha_adjudicacion": "2026-10-30T15:02:00",
+    "plazo_ejecucion": "0 días",
+    "monto_estimado": "CLP 2.200.000",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
-    "contrato": "No",
+    "tipo": "L1",
+    "contrato": "Sí",
     "obras": "No",
     "subcontratacion": "Sí",
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
     "extension_plazo": "No",
-    "fuente_financiamiento": "SALUD",
+    "fuente_financiamiento": "Por confirmar",
     "score": 75,
     "semaforo": "Revisar",
     "score_desglose": [
@@ -1845,74 +1297,21 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2667-97-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1660-153-L126"
   },
   {
-    "id": "2741-67-LP26",
-    "titulo": "MEJORAMIENTO CANCHA DE FUTBOL 3 RECINTO ANFA",
-    "comprador": "Por confirmar",
-    "region": "Por confirmar",
+    "id": "712307-75-LE26",
+    "titulo": "Contratación FTO proyecto Construcción Pavimentos Participativos 35 Proceso Araucanía",
+    "comprador": "SERVICIO DE VIVIENDA Y URBANIZACION IX REGION",
+    "region": "Región de la Araucanía ",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-11-10T12:00:00",
+    "fecha_cierre": "2026-10-19T15:10:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "Por confirmar",
-    "plazo_ejecucion": "Por confirmar",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Por confirmar",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "Por confirmar",
-    "contrato": "Por confirmar",
-    "obras": "Por confirmar",
-    "subcontratacion": "Por confirmar",
-    "toma_razon": "Por confirmar",
-    "visibilidad_monto": "Por confirmar",
-    "extension_plazo": "Por confirmar",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 75,
-    "semaforo": "Revisar",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Validar requisitos técnicos en bases",
-      "Validar garantías, anexos y experiencia solicitada",
-      "Confirmar fecha de cierre, preguntas y visita a terreno"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2741-67-LP26"
-  },
-  {
-    "id": "4055-87-LE26",
-    "titulo": "SE REQUIERE ADQUIRIR MATERIALES DE CONSTRUCCION",
-    "comprador": "I MUNICIPALIDAD DE YUMBEL",
-    "region": "Región del Biobío ",
-    "subrubro": "Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-20T15:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-11-10T16:00:00",
-    "plazo_ejecucion": "0 horas",
-    "monto_estimado": "CLP 27.170.000",
+    "fecha_adjudicacion": "2026-11-13T18:00:00",
+    "plazo_ejecucion": "300 horas",
+    "monto_estimado": "CLP 38.000.000",
     "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
@@ -1923,7 +1322,7 @@
     "toma_razon": "No",
     "visibilidad_monto": "Sí",
     "extension_plazo": "No",
-    "fuente_financiamiento": "MUNICIPAL",
+    "fuente_financiamiento": "SECTORIAL",
     "score": 75,
     "semaforo": "Revisar",
     "score_desglose": [
@@ -1951,32 +1350,32 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4055-87-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=712307-75-LE26"
   },
   {
-    "id": "5282-41-LP26",
-    "titulo": "Mejoramiento Parque Infantil Phillipi Porvenir",
-    "comprador": "Por confirmar",
-    "region": "Por confirmar",
+    "id": "750998-73-LE26",
+    "titulo": "HABILITACIÓN OFICINA BARRIAL-BARRIO CÍVICO",
+    "comprador": "I MUNICIPALIDAD DE LO ESPEJO",
+    "region": "Región Metropolitana de Santiago",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-11-05T09:00:00",
+    "fecha_cierre": "2026-10-23T15:15:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "Por confirmar",
-    "plazo_ejecucion": "Por confirmar",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Por confirmar",
+    "fecha_adjudicacion": "2026-11-20T15:30:00",
+    "plazo_ejecucion": "45 horas",
+    "monto_estimado": "CLP 8.983.733",
+    "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "Por confirmar",
-    "contrato": "Por confirmar",
-    "obras": "Por confirmar",
-    "subcontratacion": "Por confirmar",
-    "toma_razon": "Por confirmar",
-    "visibilidad_monto": "Por confirmar",
-    "extension_plazo": "Por confirmar",
-    "fuente_financiamiento": "Por confirmar",
+    "tipo": "LE",
+    "contrato": "Sí",
+    "obras": "Sí",
+    "subcontratacion": "Sí",
+    "toma_razon": "No",
+    "visibilidad_monto": "Sí",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "Convenio Transf. Secretaria Regional y Municipal",
     "score": 75,
     "semaforo": "Revisar",
     "score_desglose": [
@@ -1998,91 +1397,38 @@
     ],
     "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
     "observaciones_importantes": [
-      "Validar requisitos técnicos en bases",
-      "Validar garantías, anexos y experiencia solicitada",
-      "Confirmar fecha de cierre, preguntas y visita a terreno"
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
+      "Monto disponible detectado; validar si el margen justifica postulación"
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5282-41-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=750998-73-LE26"
   },
   {
-    "id": "229-107-LE26",
-    "titulo": "CONSTRUCCIÓN DE PROYECTO DE ILUMINACIÓN COMUNAL - CONVENIO CÓDIGO MATRIZ SNSM25-CMP 0139 CÓDIGO DEL PROYECTO SNSM25-IL-0008 - LAS TAGUITAS - EL PORVENIR",
-    "comprador": "Por confirmar",
-    "region": "Por confirmar",
+    "id": "1094-2-O126",
+    "titulo": "ATIF CONSERVACION PEQUEÑOS AERODROMOS EL TUQUI Y PICHIDANGUI",
+    "comprador": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+    "region": "Región de Coquimbo ",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-21T15:00:00",
+    "fecha_cierre": "2026-10-21T09:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "Por confirmar",
-    "plazo_ejecucion": "Por confirmar",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Por confirmar",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "Por confirmar",
-    "contrato": "Por confirmar",
-    "obras": "Por confirmar",
-    "subcontratacion": "Por confirmar",
-    "toma_razon": "Por confirmar",
-    "visibilidad_monto": "Por confirmar",
-    "extension_plazo": "Por confirmar",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 75,
-    "semaforo": "Revisar",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Validar requisitos técnicos en bases",
-      "Validar garantías, anexos y experiencia solicitada",
-      "Confirmar fecha de cierre, preguntas y visita a terreno"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=229-107-LE26"
-  },
-  {
-    "id": "619133-117-LP26",
-    "titulo": "CONSTRUCCIÓN Y HABILITACIÓN DE RESIDENCIAS MÉDICAS EN  HOSPITAL SAN CAMILO DE SAN FELIPE ",
-    "comprador": "SERVICIO SALUD SAN FELIPE LOS ANDES HOSP",
-    "region": "Región de Valparaíso ",
-    "subrubro": "Obras civiles",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-10-27T15:00:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-15T12:00:00",
+    "fecha_adjudicacion": "2026-11-10T13:17:00",
     "plazo_ejecucion": "0 horas",
     "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
+    "tipo_monto": "Por confirmar",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
+    "tipo": "O1",
     "contrato": "No",
     "obras": "No",
     "subcontratacion": "No",
     "toma_razon": "No",
     "visibilidad_monto": "No",
     "extension_plazo": "No",
-    "fuente_financiamiento": "Por confirmar",
+    "fuente_financiamiento": "Sectorial",
     "score": 75,
     "semaforo": "Revisar",
     "score_desglose": [
@@ -2109,16 +1455,16 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=619133-117-LP26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1094-2-O126"
   },
   {
-    "id": "838108-15-LE26",
-    "titulo": "LP REMODELACION DE BAÑOS 07 CABAÑAS CR PUNTA VERDE",
+    "id": "1393093-116-LE26",
+    "titulo": "CONSERVACIÓN ESCUELA RURAL ICHUAC PUQUELDÓN",
     "comprador": "Por confirmar",
     "region": "Por confirmar",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-16T16:00:00",
+    "fecha_cierre": "2026-10-19T16:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
     "fecha_adjudicacion": "Por confirmar",
@@ -2162,31 +1508,83 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=838108-15-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1393093-116-LE26"
   },
   {
-    "id": "2289-54-LE26",
-    "titulo": "CONSTRUCCION POZO PROFUNDO SECTOR CASMA COMUNA DE FRUTILLAR",
-    "comprador": "Por confirmar",
-    "region": "Por confirmar",
+    "id": "2928-23-LP26",
+    "titulo": "CONSTRUCCIÓN CÁMARAS DE TELEVIGILANCIA QUELLÓN",
+    "comprador": "Ilustre Municipalidad De Quellón",
+    "region": "Región de los Lagos ",
     "subrubro": "Obras civiles",
     "estado": "Publicada",
-    "fecha_cierre": "2026-11-06T15:05:00",
+    "fecha_cierre": "2026-10-27T10:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "Por confirmar",
-    "plazo_ejecucion": "Por confirmar",
+    "fecha_adjudicacion": "2026-11-30T17:30:00",
+    "plazo_ejecucion": "0 horas",
     "monto_estimado": "Por confirmar",
-    "tipo_monto": "Por confirmar",
+    "tipo_monto": "Presupuesto disponible",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "Por confirmar",
-    "contrato": "Por confirmar",
-    "obras": "Por confirmar",
-    "subcontratacion": "Por confirmar",
-    "toma_razon": "Por confirmar",
-    "visibilidad_monto": "Por confirmar",
-    "extension_plazo": "Por confirmar",
+    "tipo": "LP",
+    "contrato": "No",
+    "obras": "Sí",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "SUBDERE  MUNICIPALIDAD",
+    "score": 75,
+    "semaforo": "Revisar",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Obras civiles",
+        "puntos": 17,
+        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2928-23-LP26"
+  },
+  {
+    "id": "1077204-8-L126",
+    "titulo": "SERVICIOS DE REVISOR INDEPENDIENTE DE CÁLCULO ESTRUCTURAL  PROYECTO: REMODELACIÓN Y AMPLIACIÓN SERVICIO DE URGENCIA   HOSPITAL EL CARMEN ",
+    "comprador": "SERVICIO DE SALUD NUBLE",
+    "region": "Región del Maule ",
+    "subrubro": "Obras civiles",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-13T17:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-10-24T17:00:00",
+    "plazo_ejecucion": "0 días",
+    "monto_estimado": "CLP 600.000",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "L1",
+    "contrato": "No",
+    "obras": "No",
+    "subcontratacion": "Sí",
+    "toma_razon": "No",
+    "visibilidad_monto": "Sí",
+    "extension_plazo": "No",
     "fuente_financiamiento": "Por confirmar",
     "score": 75,
     "semaforo": "Revisar",
@@ -2209,22 +1607,22 @@
     ],
     "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
     "observaciones_importantes": [
-      "Validar requisitos técnicos en bases",
-      "Validar garantías, anexos y experiencia solicitada",
-      "Confirmar fecha de cierre, preguntas y visita a terreno"
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución",
+      "Monto disponible detectado; validar si el margen justifica postulación"
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2289-54-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1077204-8-L126"
   },
   {
-    "id": "918434-15-L126",
-    "titulo": "SERVICIO DE GASFITERÍA, MANTENCIÓN ELÉCTRICA, CARPINTERÍA, CERRAJERÍA Y TRABAJOS MENORES CORRECTIVOS (INCLUYE MATERIALES).",
+    "id": "548874-85-LE26",
+    "titulo": "MANTENCIÓN ELÉCTRICA IPS VALLENAR",
     "comprador": "Por confirmar",
     "region": "Por confirmar",
     "subrubro": "Eléctrica / luminarias",
     "estado": "Publicada",
-    "fecha_cierre": "2026-10-19T20:02:00",
+    "fecha_cierre": "2026-10-22T15:30:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
     "fecha_adjudicacion": "Por confirmar",
@@ -2268,11 +1666,169 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=918434-15-L126"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=548874-85-LE26"
   },
   {
-    "id": "1536771-9-LE26",
-    "titulo": "MANTENCION Y REPARACION DE VEHICULOS FISCALES.",
+    "id": "5441-12-LP26",
+    "titulo": "Generador 500 kVA y Tablero de Transf. Autom. 800A",
+    "comprador": "Por confirmar",
+    "region": "Por confirmar",
+    "subrubro": "Eléctrica / luminarias",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-11-02T15:01:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "Por confirmar",
+    "plazo_ejecucion": "Por confirmar",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Por confirmar",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "Por confirmar",
+    "contrato": "Por confirmar",
+    "obras": "Por confirmar",
+    "subcontratacion": "Por confirmar",
+    "toma_razon": "Por confirmar",
+    "visibilidad_monto": "Por confirmar",
+    "extension_plazo": "Por confirmar",
+    "fuente_financiamiento": "Por confirmar",
+    "score": 74,
+    "semaforo": "Revisar",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Eléctrica / luminarias",
+        "puntos": 16,
+        "detalle": "Coincide con mantención eléctrica, alumbrado, luminarias o tableros"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Validar requisitos técnicos en bases",
+      "Validar garantías, anexos y experiencia solicitada",
+      "Confirmar fecha de cierre, preguntas y visita a terreno"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5441-12-LP26"
+  },
+  {
+    "id": "1524039-4-LE26",
+    "titulo": "CONV. SUMINISTRO REPARACION Y MANTENCION VEH. MUN.",
+    "comprador": "Por confirmar",
+    "region": "Por confirmar",
+    "subrubro": "Mantención integral / obras menores",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-20T09:00:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "Por confirmar",
+    "plazo_ejecucion": "Por confirmar",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Por confirmar",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "Por confirmar",
+    "contrato": "Por confirmar",
+    "obras": "Por confirmar",
+    "subcontratacion": "Por confirmar",
+    "toma_razon": "Por confirmar",
+    "visibilidad_monto": "Por confirmar",
+    "extension_plazo": "Por confirmar",
+    "fuente_financiamiento": "Por confirmar",
+    "score": 73,
+    "semaforo": "Revisar",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Validar requisitos técnicos en bases",
+      "Validar garantías, anexos y experiencia solicitada",
+      "Confirmar fecha de cierre, preguntas y visita a terreno"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1524039-4-LE26"
+  },
+  {
+    "id": "3156-48-LE26",
+    "titulo": "REPARACIÓN Y MANT. VEHICULOS ADMINISTRATIVOS ",
+    "comprador": "DIRECCION DE ABASTECIMIENTO DE LA ARMADA",
+    "region": "Región del Biobío ",
+    "subrubro": "Mantención integral / obras menores",
+    "estado": "Publicada",
+    "fecha_cierre": "2026-10-19T15:33:00",
+    "fecha_inicio_preguntas": "Por confirmar",
+    "fecha_final_preguntas": "Por confirmar",
+    "fecha_adjudicacion": "2026-11-20T15:34:00",
+    "plazo_ejecucion": "0 horas",
+    "monto_estimado": "Por confirmar",
+    "tipo_monto": "Presupuesto disponible",
+    "moneda": "CLP",
+    "modalidad_pago": "Por confirmar",
+    "tipo": "LE",
+    "contrato": "Sí",
+    "obras": "No",
+    "subcontratacion": "No",
+    "toma_razon": "No",
+    "visibilidad_monto": "No",
+    "extension_plazo": "No",
+    "fuente_financiamiento": "A.F.L.",
+    "score": 73,
+    "semaforo": "Revisar",
+    "score_desglose": [
+      {
+        "factor": "Base",
+        "puntos": 50,
+        "detalle": "Puntaje inicial para toda licitación detectada"
+      },
+      {
+        "factor": "Mantención integral / obras menores",
+        "puntos": 15,
+        "detalle": "Coincide con mantención integral, reparación u obras menores"
+      },
+      {
+        "factor": "Estado publicada",
+        "puntos": 8,
+        "detalle": "Está publicada o requiere revisión inmediata"
+      }
+    ],
+    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
+    "observaciones_importantes": [
+      "Revisar posible requisito asociado a: plazo",
+      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+    ],
+    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
+    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3156-48-LE26"
+  },
+  {
+    "id": "707415-41-LE26",
+    "titulo": "REPARACIONES EMERGENCIA POR LLUVIAS ANTOFAGASTA",
     "comprador": "Por confirmar",
     "region": "Por confirmar",
     "subrubro": "Mantención integral / obras menores",
@@ -2321,16 +1877,16 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1536771-9-LE26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=707415-41-LE26"
   },
   {
-    "id": "948354-151-LR26",
-    "titulo": "CONTRATACIÓN DEL SERVICIO DE SALA CUNA Y JARDÍN INFANTIL PARA EL HOSPITAL DIPRECA ",
+    "id": "5952-9-LE26",
+    "titulo": "MANTENCIÓN Y OBRAS MENORES FEH",
     "comprador": "Por confirmar",
     "region": "Por confirmar",
     "subrubro": "Mantención integral / obras menores",
     "estado": "Publicada",
-    "fecha_cierre": "2026-11-05T16:00:00",
+    "fecha_cierre": "2026-10-21T16:00:00",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
     "fecha_adjudicacion": "Por confirmar",
@@ -2374,131 +1930,31 @@
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=948354-151-LR26"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5952-9-LE26"
   },
   {
-    "id": "2342-39-LR26",
-    "titulo": "MANTENCIÓN Y REPARACIÓN DE VEHÍCULOS MAQUINARIAS PESADAS Y MAQUINARIAS MENORES DE PROPIEDAD MUNICIPAL",
-    "comprador": "I MUNICIPALIDAD DE SAN BERNARDO",
-    "region": "Región Metropolitana de Santiago",
-    "subrubro": "Mantención integral / obras menores",
-    "estado": "Publicada",
-    "fecha_cierre": "2026-11-06T09:30:00",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-12-14T20:00:00",
-    "plazo_ejecucion": "36 horas",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Precio referencial",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "LR",
-    "contrato": "No",
-    "obras": "No",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "No",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 73,
-    "semaforo": "Revisar",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Mantención integral / obras menores",
-        "puntos": 15,
-        "detalle": "Coincide con mantención integral, reparación u obras menores"
-      },
-      {
-        "factor": "Estado publicada",
-        "puntos": 8,
-        "detalle": "Está publicada o requiere revisión inmediata"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2342-39-LR26"
-  },
-  {
-    "id": "728-14-LE26",
-    "titulo": "Insumos de Ferreteria Construcción y Carpintería",
+    "id": "2928-21-LP26",
+    "titulo": "CONSTRUCCIÓN CÁMARAS DE TELEVIGILANCIA QUELLÓN",
     "comprador": "Por confirmar",
     "region": "Por confirmar",
-    "subrubro": "Obras civiles",
-    "estado": "16",
-    "fecha_cierre": "2026-10-06T13:07:01.1",
-    "fecha_inicio_preguntas": "Por confirmar",
-    "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "Por confirmar",
-    "plazo_ejecucion": "Por confirmar",
-    "monto_estimado": "Por confirmar",
-    "tipo_monto": "Por confirmar",
-    "moneda": "CLP",
-    "modalidad_pago": "Por confirmar",
-    "tipo": "Por confirmar",
-    "contrato": "Por confirmar",
-    "obras": "Por confirmar",
-    "subcontratacion": "Por confirmar",
-    "toma_razon": "Por confirmar",
-    "visibilidad_monto": "Por confirmar",
-    "extension_plazo": "Por confirmar",
-    "fuente_financiamiento": "Por confirmar",
-    "score": 67,
-    "semaforo": "Revisar",
-    "score_desglose": [
-      {
-        "factor": "Base",
-        "puntos": 50,
-        "detalle": "Puntaje inicial para toda licitación detectada"
-      },
-      {
-        "factor": "Obras civiles",
-        "puntos": 17,
-        "detalle": "Coincide con obras civiles, conservación, pavimentos, techumbres o infraestructura"
-      }
-    ],
-    "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
-    "observaciones_importantes": [
-      "Validar requisitos técnicos en bases",
-      "Validar garantías, anexos y experiencia solicitada",
-      "Confirmar fecha de cierre, preguntas y visita a terreno"
-    ],
-    "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
-    "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=728-14-LE26"
-  },
-  {
-    "id": "1180730-32-R126",
-    "titulo": "REPOSICIÓN ECÓGRAFO MULTIPROPÓSITO HPN",
-    "comprador": "SERVICIO DE SALUD MAGALLANES",
-    "region": "Región de Magallanes y de la Antártica",
     "subrubro": "Obras civiles",
     "estado": "15",
-    "fecha_cierre": "2026-10-06T10:29:49.947",
+    "fecha_cierre": "2026-10-07T10:52:50.86",
     "fecha_inicio_preguntas": "Por confirmar",
     "fecha_final_preguntas": "Por confirmar",
-    "fecha_adjudicacion": "2026-09-30T19:51:00",
-    "plazo_ejecucion": "0 horas",
+    "fecha_adjudicacion": "Por confirmar",
+    "plazo_ejecucion": "Por confirmar",
     "monto_estimado": "Por confirmar",
-    "tipo_monto": "Presupuesto disponible",
+    "tipo_monto": "Por confirmar",
     "moneda": "CLP",
     "modalidad_pago": "Por confirmar",
-    "tipo": "LP",
+    "tipo": "Por confirmar",
     "contrato": "Por confirmar",
-    "obras": "No",
-    "subcontratacion": "No",
-    "toma_razon": "No",
-    "visibilidad_monto": "No",
-    "extension_plazo": "No",
+    "obras": "Por confirmar",
+    "subcontratacion": "Por confirmar",
+    "toma_razon": "Por confirmar",
+    "visibilidad_monto": "Por confirmar",
+    "extension_plazo": "Por confirmar",
     "fuente_financiamiento": "Por confirmar",
     "score": 67,
     "semaforo": "Revisar",
@@ -2516,11 +1972,12 @@
     ],
     "plazo_critico": "Revisar fecha de cierre, preguntas, visita a terreno, garantías y plazo de ejecución",
     "observaciones_importantes": [
-      "Revisar posible requisito asociado a: plazo",
-      "Existe información de duración/plazo contractual; evaluar capacidad de ejecución"
+      "Validar requisitos técnicos en bases",
+      "Validar garantías, anexos y experiencia solicitada",
+      "Confirmar fecha de cierre, preguntas y visita a terreno"
     ],
     "accion": "Descargar bases y revisar anexos críticos antes de decidir postulación.",
     "fit": "Clasificación automática inicial para mantención y obras civiles; requiere revisión humana en piloto.",
-    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1180730-32-R126"
+    "source": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2928-21-LP26"
   }
 ]
